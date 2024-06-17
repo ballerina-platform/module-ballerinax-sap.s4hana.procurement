@@ -22,10 +22,10 @@ plugins {
     id 'io.ballerina.plugin'
 }
 
-description = 'Ballerina - SAP S/4HANA Procurement API'
+description = 'Ballerina - SAP S/4HANA Purchasing Info Record API'
 
-def packageName = "sap.s4hana.procurement"
-def moduleVersion = project.procurementVersion.replace("-SNAPSHOT", "")
+def packageName = "sap.s4hana.api_inforecord_process_srv"
+def moduleVersion = project.api_inforecord_process_srvVersion.replace("-SNAPSHOT", "")
 def ballerinaTomlFile = file("${project.projectDir}/Ballerina.toml")
 
 ballerina {
@@ -33,7 +33,6 @@ ballerina {
     module = packageName
     isConnector = true
     platform = "any"
-    testCoverageParam = '--code-coverage --coverage-format=xml --includes=ballerinax.* --excludes=modules/**/**'
 }
 
 task updateTomlFiles {
@@ -61,10 +60,10 @@ release {
     buildTasks = ['build']
     failOnSnapshotDependencies = true
     versionPropertyFile = '../../gradle.properties'
-    versionProperties = ['procurementVersion']
-    tagTemplate = 'procurement-v${version}'
+    versionProperties = ['api_inforecord_process_srvVersion']
+    tagTemplate = 'api_inforecord_process_srv-v${version}'
     git {
-        requireBranch = "release-procurement-${moduleVersion}"
+        requireBranch = "release-api_inforecord_process_srv-${moduleVersion}"
         pushToRemote = 'origin'
     }
 }

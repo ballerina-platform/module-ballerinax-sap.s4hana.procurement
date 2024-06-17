@@ -3,7 +3,7 @@
 [S/4HANA](https://www.sap.com/india/products/erp/s4hana.html) is a robust enterprise resource planning (ERP) solution,
 designed for large-scale enterprises by SAP SE.
 
-
+The `ballerinax/sap.s4hana.api_inforecord_process_srv` package offers APIs for seamless integration with the [Purchasing Info Record API v1.0.0](https://api.sap.com/api/API_INFORECORD_PROCESS_SRV/overview). This synchronous inbound service allows the creation, modification, and deletion of purchasing info records, complete with conditions. The service encompasses general data, purchasing organization data, and conditions.
 
 ## Setup guide
 
@@ -13,7 +13,7 @@ designed for large-scale enterprises by SAP SE.
 
    ![Display Scenarios](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-sap/main/docs/setup/3-1-display-scenarios.png)
 
-3. In the search bar, type `` and select the corresponding scenario from the results.
+3. In the search bar, type `Purchasing Info Record Integration` and select the corresponding scenario from the results.
 
    ![Search Sales Order](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-sap/main/docs/setup/3-2-search-sales-order.png)
 
@@ -35,14 +35,14 @@ designed for large-scale enterprises by SAP SE.
 
 ## Quickstart
 
-To use the `sap.s4hana.procurement` connector in your Ballerina application, modify the `.bal` file as follows:
+To use the `sap.s4hana.api_inforecord_process_srv` connector in your Ballerina application, modify the `.bal` file as follows:
 
 ### Step 1: Import the module
 
-Import the `sap.s4hana.procurement` module.
+Import the `sap.s4hana.api_inforecord_process_srv` module.
 
 ```ballerina
-
+import ballerinax/sap.s4hana.api_inforecord_process_srv as inforecdprc;
 ```
 
 ### Step 2: Instantiate a new connector
@@ -54,7 +54,7 @@ configurable string hostname = ?;
 configurable string username = ?;
 configurable string password = ?;
 
-
+inforecdprc:Client infoRecProcessClient = check new (
     hostname = hostname,
     config = {
         auth: {
@@ -70,7 +70,7 @@ configurable string password = ?;
 Now, utilize the available connector operations.
 
 ```ballerina
-
+inforecdprc:Wrapper listPurchasingInfoRecords = check infoRecProcessClient->listA_PurchasingInfoRecords();
 ```
 
 ### Step 4: Run the Ballerina application

@@ -31,12 +31,12 @@ plugins {
 rootProject.name = "module-ballerinax-sap.s4hana.procurement"
 
 include ':procurement-ballerina'
-include ':procurement-ballerina:procurement'
+include ':procurement-ballerina:api_inforecord_process_srv'
 include ':procurement-examples'
 
 
 project(':procurement-ballerina').projectDir = file("ballerina")
-project(':procurement-ballerina:procurement').projectDir = file("ballerina/procurement")
+project(':procurement-ballerina:api_inforecord_process_srv').projectDir = file("ballerina/api_inforecord_process_srv")
 project(':procurement-examples').projectDir = file("examples")
 
 gradleEnterprise {
