@@ -8,6 +8,7 @@ on:
         description: Select Connector
         required: true
         options:
+          - api_inforecord_process_srv
 
 jobs:
   call_workflow:
