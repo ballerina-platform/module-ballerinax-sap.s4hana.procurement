@@ -69,7 +69,7 @@ Execute the commands below to build from the source.
 
    |   API Name  |            Connector             |
    | ----------- | -------------------------------- |
-   | procurement | ballerinax/sap.s4hana.procurement |
+   |             |                                  |
 
 5. To run tests against different environment:
 

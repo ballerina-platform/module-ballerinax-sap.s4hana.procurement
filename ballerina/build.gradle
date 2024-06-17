@@ -86,7 +86,6 @@ task clean {
 
 task build {
     dependsOn(updateDocumentationFiles)
-    build.dependsOn ':procurement-ballerina:procurement:build'
 }
 
 publishToMavenLocal.dependsOn build

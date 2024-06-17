@@ -8,7 +8,6 @@ on:
         description: Select Connector
         required: true
         options:
-          - procurement
 
 jobs:
   call_workflow:

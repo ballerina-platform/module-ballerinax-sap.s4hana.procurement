@@ -15,7 +15,6 @@ on:
         description: Select Connector
         required: true
         options:
-          - procurement
 
 jobs:
   publish-release:
