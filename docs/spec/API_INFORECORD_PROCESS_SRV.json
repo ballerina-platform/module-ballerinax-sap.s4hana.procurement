@@ -115,6 +115,7 @@
   "paths": {
     "/A_PurchasingInfoRecord": {
       "get": {
+        "operationId": "listA_PurchasingInfoRecords",
         "summary": "Reads the general information of a purchasing info record in the system.",
         "description": "Gets the general information of the purchasing info record in the system. Note that if there are many purchasing info records in the system, this operation might take a while.",
         "tags": [
@@ -183,6 +184,7 @@
         }
       },
       "post": {
+        "operationId": "createA_PurchasingInfoRecord",
         "summary": "Creates a purchasing info record.",
         "description": "Creates a purchasing info record in the system. It is mandatory to provide details such as, supplier, material or supplier, material group.",
         "tags": [
@@ -236,6 +238,7 @@
         }
       ],
       "get": {
+        "operationId": "getA_PurchasingInfoRecord",
         "summary": "Reads the general information of a purchasing info record.",
         "description": "Gets the information of the purchasing info record using the purchasing info record number provided.",
         "tags": [
@@ -272,6 +275,7 @@
         }
       },
       "patch": {
+        "operationId": "patchA_PurchasingInfoRecord",
         "summary": "Updates the general information of a purchasing info record.",
         "description": "Updates the general information of a purchasing info record in the system using the purchasing info record number.",
         "tags": [
@@ -318,6 +322,7 @@
         }
       ],
       "get": {
+        "operationId": "listPurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecord",
         "summary": "Reads the purchasing data of a purchasing info record.",
         "description": "Gets the purchasing data of a purchasing info record in the system using the purchasing info record number and purchasing details of an info record.",
         "tags": [
@@ -387,6 +392,7 @@
         }
       },
       "post": {
+        "operationId": "createPurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecord",
         "summary": "Creates the purchasing data of a purchasing info record.",
         "description": "Creates the purchasing data in the system having the purchasing details of an info record.",
         "tags": [
@@ -429,6 +435,7 @@
     },
     "/A_PurgInfoRecdOrgPlantData": {
       "get": {
+        "operationId": "listA_PurgInfoRecdOrgPlantData",
         "summary": "Reads the purchasing data of a purchasing info record in the system.",
         "description": "Gets the purchasing data of a purchasing info record in the system using the purchasing details of an info record.",
         "tags": [
@@ -497,6 +504,7 @@
         }
       },
       "post": {
+        "operationId": "createA_PurgInfoRecdOrgPlantData",
         "summary": "Creates a purchasing info record in the system.",
         "description": "Creates a purchasing info record in the system having the purchasing details of an info record.",
         "tags": [
@@ -580,6 +588,7 @@
         }
       ],
       "get": {
+        "operationId": "getA_PurgInfoRecdOrgPlantData",
         "summary": "Reads the purchasing information of a purchasing info record in the system.",
         "description": "Gets the purchasing information of a purchasing info record in the system for the purchasing info record category, purchasing organization details, and plant.",
         "tags": [
@@ -616,6 +625,7 @@
         }
       },
       "patch": {
+        "operationId": "patchA_PurgInfoRecdOrgPlantData",
         "summary": "Updates the purchasing information of a purchasing info record.",
         "description": "Updates the purchasing information of a purchasing info record in the system, using the purchasing info record number, purchasing info record category, purchasing organization, plant.",
         "tags": [
@@ -692,6 +702,7 @@
         }
       ],
       "get": {
+        "operationId": "getPurgInfoRecdOfA_PurgInfoRecdOrgPlantData",
         "summary": "Reads the purchasing information of a purchasing info record.",
         "description": "Gets the purchasing information of a purchasing info record in the system for the purchasing info record number, purchasing info record category, purchasing organization details, and plant.",
         "tags": [
@@ -773,6 +784,7 @@
         }
       ],
       "get": {
+        "operationId": "listPurInfoRecdPrcgCndnValiditiesOfA_PurgInfoRecdOrgPlantData",
         "summary": "Reads the pricing condition validity details of a purchasing info record.",
         "description": "Reads the pricing condition validity details and purchasing information of a purchasing info record in the system for the purchasing info record number, purchasing info record category, purchasing organization, plant.",
         "tags": [
@@ -842,6 +854,7 @@
         }
       },
       "post": {
+        "operationId": "createPurInfoRecdPrcgCndnValidityOfA_PurgInfoRecdOrgPlantData",
         "summary": "Creates the pricing condition validity details of a purchasing info record.",
         "description": "Creates the purchasing information and pricing condition validity details for the purchasing info record category, purchasing organization, plant.",
         "tags": [
@@ -926,6 +939,7 @@
         }
       ],
       "get": {
+        "operationId": "listPurInfoRecdPurOrgTextsOfA_PurgInfoRecdOrgPlantData",
         "summary": "Reads the purchasing PO text of a purchasing info record with respect to a purchasing organization.",
         "description": "Gets the purchasing PO Text data of a purchasing info record in the system using the purchasing details of an info record.",
         "tags": [
@@ -992,6 +1006,7 @@
         }
       },
       "post": {
+        "operationId": "createPurInfoRecdPurOrgTextOfA_PurgInfoRecdOrgPlantData",
         "summary": "Creates the purchasing PO text of a purchasing info record with respect to a purchasing organization.",
         "description": "Creates the purchasing PO Text data of a purchasing info record in the system using the purchasing details of an info record.",
         "tags": [
@@ -1034,6 +1049,7 @@
     },
     "/A_PurgInfoRecdOrgPOText": {
       "get": {
+        "operationId": "listA_PurgInfoRecdOrgPOTexts",
         "summary": "Reads the purchasing PO text of all the purchasing info records in the system.",
         "description": "Gets the purchasing PO Text data of all the purchasing info records in the system using the purchasing details of an info record.",
         "tags": [
@@ -1099,6 +1115,7 @@
         }
       },
       "post": {
+        "operationId": "createA_PurgInfoRecdOrgPOText",
         "summary": "Creates the purchasing PO text of a purchasing info record.",
         "description": "Creates the purchasing PO Text of a purchasing info record in the system. It is mandatory to provide details such as, info record category, purchasing organization etc.",
         "tags": [
@@ -1222,6 +1239,7 @@
         }
       ],
       "get": {
+        "operationId": "getA_PurgInfoRecdOrgPOText",
         "summary": "Reads the purchasing PO text of a purchasing info record.",
         "description": "Gets the purchasing PO Text of a purchasing info record in the system for the purchasing info record category, purchasing organization details, plant and language .",
         "tags": [
@@ -1255,6 +1273,7 @@
         }
       },
       "patch": {
+        "operationId": "patchA_PurgInfoRecdOrgPOText",
         "summary": "Updates the purchasing PO text of a purchasing info record.",
         "description": "Updates the purchasing PO Text of a purchasing info record in the system using purchasing details such as, info record category, purchasing organization etc.",
         "tags": [
@@ -1287,6 +1306,7 @@
         }
       },
       "delete": {
+        "operationId": "deleteA_PurgInfoRecdOrgPOText",
         "summary": "Deletes the purchasing PO text of a purchasing info record.",
         "description": "Deletes the purchasing PO Text of a purchasing info record in the system using purchasing details such as, info record category, purchasing organization etc.",
         "tags": [
@@ -1304,6 +1324,7 @@
     },
     "/A_PurInfoRecdPrcgCndn": {
       "get": {
+        "operationId": "listA_PurInfoRecdPrcgCndns",
         "summary": "Reads the pricing conditions of a purchasing record.",
         "description": "Reads the pricing conditions of a purchasing record in the system. Note that if there are many pricing conditions in the system, this operation might take a while.",
         "tags": [
@@ -1386,6 +1407,7 @@
         }
       ],
       "get": {
+        "operationId": "getA_PurInfoRecdPrcgCndn",
         "summary": "Reads the pricing conditions of a purchasing record.",
         "description": "Reads the pricing conditions of a purchasing record in the system for a condition record.",
         "tags": [
@@ -1422,6 +1444,7 @@
         }
       },
       "patch": {
+        "operationId": "patchA_PurInfoRecdPrcgCndn",
         "summary": "Updates the pricing conditions of a purchasing info record.",
         "description": "Updates the purchasing info record pricing condition details using the condition record number.",
         "tags": [
@@ -1468,6 +1491,7 @@
         }
       ],
       "get": {
+        "operationId": "listPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdPrcgCndn",
         "summary": "Reads the pricing condition scales details with respect to the specified condition record in the system.",
         "description": "Reads the purchasing info record pricing conditions along with the purchasing info record pricing condition scales details for a condition record.",
         "tags": [
@@ -1534,6 +1558,7 @@
         }
       },
       "post": {
+        "operationId": "createPurgInfoPricingCndnRecdScaleOfA_PurInfoRecdPrcgCndn",
         "summary": "Creates the pricing condition scales details with respect to the specified condition record in the system.",
         "description": "Creates the purchasing info record pricing conditions along with purchasing info record pricing condition scales details for a condition record.",
         "tags": [
@@ -1588,6 +1613,7 @@
         }
       ],
       "get": {
+        "operationId": "listPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdPrcgCndn",
         "summary": "Reads the pricing condition validity details of a purchasing info record.",
         "description": "Reads the pricing condition details for a condition record of a purchasing info record in the system.",
         "tags": [
@@ -1657,6 +1683,7 @@
         }
       },
       "post": {
+        "operationId": "createPurInfoRecdPrcgCndnValidityOfA_PurInfoRecdPrcgCndn",
         "summary": "Creates the pricing conditions of a purchasing info record.",
         "description": "Creates the purchasing info record pricing conditions along with the pricing condition validity details for a condition record.",
         "tags": [
@@ -1711,6 +1738,7 @@
         }
       ],
       "get": {
+        "operationId": "listPurInfoRecdSuplmntPrcgCndnsOfA_PurInfoRecdPrcgCndn",
         "summary": "Reads the supplementary pricing conditions of a purchasing info record.",
         "description": "Gets the purchasing info record pricing conditions along with the purchasing info record supplementary pricing conditions for a condition record.",
         "tags": [
@@ -1780,6 +1808,7 @@
         }
       },
       "post": {
+        "operationId": "createPurInfoRecdSuplmntPrcgCndnOfA_PurInfoRecdPrcgCndn",
         "summary": "Creates the supplementary pricing conditions of a purchasing info record.",
         "description": "Creates the purchasing info record pricing conditions along with purchasing info record supplementary pricing conditions for a condition record.",
         "tags": [
@@ -1822,6 +1851,7 @@
     },
     "/A_PurInfoRecdPrcgCndnScale": {
       "get": {
+        "operationId": "listA_PurInfoRecdPrcgCndnScales",
         "summary": "Reads the pricing condition scales details of all condition records in the system.",
         "description": "Reads the pricing condition scales details of all condition records in the system. Note that if there are many conditions in the system, this operation might take a while.",
         "tags": [
@@ -1887,6 +1917,7 @@
         }
       },
       "post": {
+        "operationId": "createA_PurInfoRecdPrcgCndnScale",
         "summary": "Creates the pricing condition scales details of a condition record in the system.",
         "description": "Creates the pricing condition scales details of a condition record in the system.It is mandatory to provide details such as, condition record, condition sequence number, condition scale line",
         "tags": [
@@ -1960,6 +1991,7 @@
         }
       ],
       "get": {
+        "operationId": "getA_PurInfoRecdPrcgCndnScale",
         "summary": "Reads the pricing condition scales details of a condition record in the system.",
         "description": "Reads the pricing condition scales details of a condition record in the system along with other details.",
         "tags": [
@@ -1993,6 +2025,7 @@
         }
       },
       "patch": {
+        "operationId": "patchA_PurInfoRecdPrcgCndnScale",
         "summary": "Updates the pricing condition scales details of a condition record in the system.",
         "description": "Updates the pricing condition scales details of a condition record in the system using the condition record, condition sequence number, condition scale line.",
         "tags": [
@@ -2025,6 +2058,7 @@
         }
       },
       "delete": {
+        "operationId": "deleteA_PurInfoRecdPrcgCndnScale",
         "summary": "Deletes the pricing condition scales details of a condition record in the system.",
         "description": "Deletes the pricing condition scales details of a condition record in the system for a condition record, condition sequential number and condition scale line.",
         "tags": [
@@ -2042,6 +2076,7 @@
     },
     "/A_PurInfoRecdPrcgCndnValidity": {
       "get": {
+        "operationId": "listA_PurInfoRecdPrcgCndnValidities",
         "summary": "Reads the pricing condition validity details of a purchasing info record.",
         "description": "Reads the pricing condition validity of a purchasing info record in the system. Note that if there are many conditions in the system, this operation might take a while.",
         "tags": [
@@ -2110,6 +2145,7 @@
         }
       },
       "post": {
+        "operationId": "createA_PurInfoRecdPrcgCndnValidity",
         "summary": "Creates the pricing condition validity of a purchasing info record.",
         "description": "Creates the pricing condition validity of a purchasing info record in the system.It is mandatory to provide details such as, condition type, condition validity end date, condition validity start date, purchasing info record category.",
         "tags": [
@@ -2174,6 +2210,7 @@
         }
       ],
       "get": {
+        "operationId": "getA_PurInfoRecdPrcgCndnValidity",
         "summary": "Reads the pricing condition validity details of a purchasing info record in the system.",
         "description": "Reads the purchasing info record pricing condition validity details for a condition record along with condition validity end date.",
         "tags": [
@@ -2210,6 +2247,7 @@
         }
       },
       "patch": {
+        "operationId": "patchA_PurInfoRecdPrcgCndnValidity",
         "summary": "Updates the pricing condition validity details of a purchasing info record.",
         "description": "Updates the pricing condition validity details of a purchasing info record in the system using the condition record and condition validity end date details.",
         "tags": [
@@ -2267,6 +2305,7 @@
         }
       ],
       "get": {
+        "operationId": "getPurgInfoRecdOfA_PurInfoRecdPrcgCndnValidity",
         "summary": "Reads the general information of a purchasing info record.",
         "description": "Gets the general information of a purchasing info record in the system for the condition record and condition validity end date.",
         "tags": [
@@ -2329,6 +2368,7 @@
         }
       ],
       "get": {
+        "operationId": "getPurgInfoRecdOrgPlantDataOfA_PurInfoRecdPrcgCndnValidity",
         "summary": "Reads the purchasing information of a purchasing info record.",
         "description": "Gets the purchasing information of a purchasing info record and purchasing pricing condition validity details in the system for condition record and condition validity end date.",
         "tags": [
@@ -2391,6 +2431,7 @@
         }
       ],
       "get": {
+        "operationId": "getPurInfoRecdPrcgCndnOfA_PurInfoRecdPrcgCndnValidity",
         "summary": "Reads the pricing condition validity details of a purchasing info record in the system.",
         "description": "Gets the purchasing info record pricing condition validity details along with purchasing info record pricing conditions for a condition record and condition validity end date.",
         "tags": [
@@ -2430,6 +2471,7 @@
     },
     "/A_PurInfoRecdSuplmntPrcgCndn": {
       "get": {
+        "operationId": "listA_PurInfoRecdSuplmntPrcgCndns",
         "summary": "Reads the supplementary pricing conditions of a purchasing info record.",
         "description": "Reads the supplementary pricing conditions of a purchasing record in the system. Note that if there are many supplementary pricing conditions in the system, this operation might take a while.",
         "tags": [
@@ -2498,6 +2540,7 @@
         }
       },
       "post": {
+        "operationId": "createA_PurInfoRecdSuplmntPrcgCndn",
         "summary": "Creates the supplementary pricing conditions of a purchasing info record.",
         "description": "Creates the supplementary pricing conditions of a purchasing info record in the system. It is mandatory to provide details such as, condition type, condition rate value.",
         "tags": [
@@ -2561,6 +2604,7 @@
         }
       ],
       "get": {
+        "operationId": "getA_PurInfoRecdSuplmntPrcgCndn",
         "summary": "Reads the supplementary pricing conditions of a purchasing info record.",
         "description": "Reads the supplementary pricing conditions of a purchasing record in the system for a condition record and condition sequential number.",
         "tags": [
@@ -2597,6 +2641,7 @@
         }
       },
       "patch": {
+        "operationId": "patchA_PurInfoRecdSuplmntPrcgCndn",
         "summary": "Updates the supplementary pricing conditions of a purchasing info record.",
         "description": "Updates the supplementary pricing conditions of a purchasing info record in the system using the condition record and condition sequential number.",
         "tags": [
@@ -2629,6 +2674,7 @@
         }
       },
       "delete": {
+        "operationId": "deleteA_PurInfoRecdSuplmntPrcgCndn",
         "summary": "Deletes the supplementary pricing conditions of a purchasing info record.",
         "description": "Deletes the supplementary pricing conditions of a purchasing info record in the system for a condition record and condition sequential number.",
         "tags": [
@@ -2668,6 +2714,7 @@
         }
       ],
       "get": {
+        "operationId": "listPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdSuplmntPrcgCndn",
         "summary": "Reads the pricing condition scales details with respect to the specified supplementary condition record in the system.",
         "description": "Gets the pricing condition scales details with respect to the specified supplementary condition record in the system using condition record and condition sequential number.",
         "tags": [
@@ -2734,6 +2781,7 @@
         }
       },
       "post": {
+        "operationId": "createPurgInfoPricingCndnRecdScaleOfA_PurInfoRecdSuplmntPrcgCndn",
         "summary": "Creates the pricing condition scales details with respect to the specified supplementary condition record in the system.",
         "description": "Creates the pricing condition scales details with respect to the specified supplementary condition record in the system using condition record and condition sequential number.",
         "tags": [
@@ -2798,6 +2846,7 @@
         }
       ],
       "get": {
+        "operationId": "getPurInfoRecdPrcgCndnOfA_PurInfoRecdSuplmntPrcgCndn",
         "summary": "Reads the supplementary pricing conditions of a purchasing info record.",
         "description": "Gets the supplementary pricing conditions of a purchasing record in the system along with the purchasing info record pricing conditions for a condition record and condition sequential number.",
         "tags": [
@@ -2859,6 +2908,7 @@
         }
       ],
       "get": {
+        "operationId": "listPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdSuplmntPrcgCndn",
         "summary": "Reads the supplementary pricing conditions of a purchasing info record.",
         "description": "Gets the supplementary pricing conditions of a purchasing record in the system along with the purchasing info record pricing conditions for a condition record and condition sequential number.",
         "tags": [
@@ -2928,6 +2978,7 @@
         }
       },
       "post": {
+        "operationId": "createPurInfoRecdPrcgCndnValidityOfA_PurInfoRecdSuplmntPrcgCndn",
         "summary": "Creates the supplementary pricing conditions of a purchasing info record.",
         "description": "Creates the supplementary pricing conditions along with the pricing condition validity details in the system for a condition record and condition sequential number of a purchasing info record.",
         "tags": [
