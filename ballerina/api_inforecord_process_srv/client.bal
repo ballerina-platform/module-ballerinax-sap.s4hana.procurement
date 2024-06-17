@@ -18,18 +18,21 @@
 // under the License.
 
 import ballerina/http;
+import ballerinax/sap;
 
-# 
-# 
+#
+#
 # This synchronous inbound service enables you to create, update, and delete purchasing info records with conditions. The service contains general data, purchase organization data and conditions. It is based on the OData protocol. The information is sent in the request as a payload.All information is used when creating a purchasing info record, including conditions are checked for authorizations. Once the purchasinginfo record has been created, the purchasing info record number is sent in the response. If there are any issues when the purchasing info recordis created, the system displays error messages in the response.
 public isolated client class Client {
-    final http:Client clientEp;
+    final sap:Client clientEp;
+
     # Gets invoked to initialize the `connector`.
     #
     # + config - The configurations to be used when initializing the `connector` 
     # + serviceUrl - URL of the target service 
     # + return - An error if connector initialization failed 
-    public isolated function init(ConnectionConfig config, string serviceUrl) returns error? {
+    public isolated function init(ConnectionConfig config, string hostname, int port = 443) returns error? {
+        string serviceUrl = string `https://${hostname}:${port}/sap/opu/odata/sap/API_INFORECORD_PROCESS_SRV`;
         http:ClientConfiguration httpClientConfig = {auth: config.auth, httpVersion: config.httpVersion, timeout: config.timeout, forwarded: config.forwarded, poolConfig: config.poolConfig, compression: config.compression, circuitBreaker: config.circuitBreaker, retryConfig: config.retryConfig, validation: config.validation};
         do {
             if config.http1Settings is ClientHttp1Settings {
@@ -52,7 +55,7 @@ public isolated client class Client {
                 httpClientConfig.proxy = check config.proxy.ensureType(http:ProxyConfig);
             }
         }
-        http:Client httpEp = check new (serviceUrl, httpClientConfig);
+        sap:Client httpEp = check new (serviceUrl, httpClientConfig);
         self.clientEp = httpEp;
         return;
     }
