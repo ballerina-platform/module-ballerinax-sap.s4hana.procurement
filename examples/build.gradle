@@ -46,7 +46,7 @@ task testExamples {
 
 task buildExamples {
     gradle.taskGraph.whenReady { graph ->
-        if (graph.hasTask(":sap.s4hana.sales-examples:test")) {
+        if (graph.hasTask(":sap.s4hana.procurement-examples:test")) {
             buildExamples.enabled = false
         } else {
             testExamples.enabled = false
