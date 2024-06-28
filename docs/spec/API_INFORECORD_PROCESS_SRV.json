@@ -155,11 +155,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurchasingInfoRecordWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurchasingInfoRecordType",
+                      "title": "CollectionOfA_PurchasingInfoRecord",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -207,7 +207,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurchasingInfoRecordType",
+                  "title": "A_PurchasingInfoRecordWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -258,7 +258,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurchasingInfoRecordType",
+                  "title": "A_PurchasingInfoRecordWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -363,11 +363,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurgInfoRecdOrgPlantDataWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurgInfoRecdOrgPlantDataType",
+                      "title": "CollectionOfA_PurgInfoRecdOrgPlantData",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -416,7 +416,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurgInfoRecdOrgPlantDataType",
+                  "title": "A_PurgInfoRecdOrgPlantDataWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -475,11 +475,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurgInfoRecdOrgPlantDataWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurgInfoRecdOrgPlantDataType",
+                      "title": "CollectionOfA_PurgInfoRecdOrgPlantData",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -527,7 +527,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurgInfoRecdOrgPlantDataType",
+                  "title": "A_PurgInfoRecdOrgPlantDataWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -608,7 +608,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurgInfoRecdOrgPlantDataType",
+                  "title": "A_PurgInfoRecdOrgPlantDataWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -723,7 +723,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurchasingInfoRecordType",
+                  "title": "A_PurchasingInfoRecordWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -825,11 +825,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdPrcgCndnValidityWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdPrcgCndnValidityType",
+                      "title": "CollectionOfA_PurInfoRecdPrcgCndnValidity",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -878,7 +878,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnValidityType",
+                  "title": "A_PurInfoRecdPrcgCndnValidityWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -977,11 +977,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurgInfoRecdOrgPOTextWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurgInfoRecdOrgPOTextType",
+                      "title": "CollectionOfA_PurgInfoRecdOrgPOText",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -1030,7 +1030,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurgInfoRecdOrgPOTextType",
+                  "title": "A_PurgInfoRecdOrgPOTextWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -1086,11 +1086,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurgInfoRecdOrgPOTextWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurgInfoRecdOrgPOTextType",
+                      "title": "CollectionOfA_PurgInfoRecdOrgPOText",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -1138,7 +1138,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurgInfoRecdOrgPOTextType",
+                  "title": "A_PurgInfoRecdOrgPOTextWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -1256,7 +1256,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurgInfoRecdOrgPOTextType",
+                  "title": "A_PurgInfoRecdOrgPOTextWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -1364,11 +1364,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdPrcgCndnWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdPrcgCndnType",
+                      "title": "CollectionOfA_PurInfoRecdPrcgCndn",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -1427,7 +1427,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnType",
+                  "title": "A_PurInfoRecdPrcgCndnWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -1529,11 +1529,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdPrcgCndnScaleWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdPrcgCndnScaleType",
+                      "title": "CollectionOfA_PurInfoRecdPrcgCndnScale",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -1582,7 +1582,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnScaleType",
+                  "title": "A_PurInfoRecdPrcgCndnScaleWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -1654,11 +1654,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdPrcgCndnValidityWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdPrcgCndnValidityType",
+                      "title": "CollectionOfA_PurInfoRecdPrcgCndnValidity",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -1707,7 +1707,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnValidityType",
+                  "title": "A_PurInfoRecdPrcgCndnValidityWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -1779,11 +1779,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdSuplmntPrcgCndnWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdSuplmntPrcgCndnType",
+                      "title": "CollectionOfA_PurInfoRecdSuplmntPrcgCndn",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -1832,7 +1832,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdSuplmntPrcgCndnType",
+                  "title": "A_PurInfoRecdSuplmntPrcgCndnWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -1888,11 +1888,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdPrcgCndnScaleWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdPrcgCndnScaleType",
+                      "title": "CollectionOfA_PurInfoRecdPrcgCndnScale",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -1940,7 +1940,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnScaleType",
+                  "title": "A_PurInfoRecdPrcgCndnScaleWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2008,7 +2008,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnScaleType",
+                  "title": "A_PurInfoRecdPrcgCndnScaleWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2116,11 +2116,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdPrcgCndnValidityWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdPrcgCndnValidityType",
+                      "title": "CollectionOfA_PurInfoRecdPrcgCndnValidity",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -2168,7 +2168,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnValidityType",
+                  "title": "A_PurInfoRecdPrcgCndnValidityWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2230,7 +2230,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnValidityType",
+                  "title": "A_PurInfoRecdPrcgCndnValidityWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2326,7 +2326,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurchasingInfoRecordType",
+                  "title": "A_PurchasingInfoRecordWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2389,7 +2389,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurgInfoRecdOrgPlantDataType",
+                  "title": "A_PurgInfoRecdOrgPlantDataWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2452,7 +2452,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnType",
+                  "title": "A_PurInfoRecdPrcgCndnWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2511,11 +2511,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdSuplmntPrcgCndnWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdSuplmntPrcgCndnType",
+                      "title": "CollectionOfA_PurInfoRecdSuplmntPrcgCndn",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -2563,7 +2563,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdSuplmntPrcgCndnType",
+                  "title": "A_PurInfoRecdSuplmntPrcgCndnWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2624,7 +2624,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdSuplmntPrcgCndnType",
+                  "title": "A_PurInfoRecdSuplmntPrcgCndnWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2752,11 +2752,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdPrcgCndnScaleWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdPrcgCndnScaleType",
+                      "title": "CollectionOfA_PurInfoRecdPrcgCndnScale",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -2805,7 +2805,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnScaleType",
+                  "title": "A_PurInfoRecdPrcgCndnScaleWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2867,7 +2867,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnType",
+                  "title": "A_PurInfoRecdPrcgCndnWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -2949,11 +2949,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurInfoRecdPrcgCndnValidityWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurInfoRecdPrcgCndnValidityType",
+                      "title": "CollectionOfA_PurInfoRecdPrcgCndnValidity",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -3002,7 +3002,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurInfoRecdPrcgCndnValidityType",
+                  "title": "A_PurInfoRecdPrcgCndnValidityWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
@@ -8265,57 +8265,6 @@
           ]
         }
       },
-      "A_PurchasingInfoRecordByKeySelectOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "PurchasingInfoRecord",
-            "Supplier",
-            "Material",
-            "MaterialGroup",
-            "CreationDate",
-            "IsDeleted",
-            "PurchasingInfoRecordDesc",
-            "PurgInfoRecNonStockItmSortTerm",
-            "PurgDocOrderQuantityUnit",
-            "OrderItemQtyToBaseQtyNmrtr",
-            "OrderItemQtyToBaseQtyDnmntr",
-            "SupplierMaterialNumber",
-            "SupplierRespSalesPersonName",
-            "SupplierPhoneNumber",
-            "BaseUnit",
-            "SupplierMaterialGroup",
-            "PriorSupplier",
-            "AvailabilityStartDate",
-            "AvailabilityEndDate",
-            "VarblPurOrdUnitIsActive",
-            "Manufacturer",
-            "IsRegularSupplier",
-            "SupplierSubrange",
-            "NoDaysReminder1",
-            "NoDaysReminder2",
-            "NoDaysReminder3",
-            "ProductPurchasePointsQty",
-            "ProductPurchasePointsQtyUnit",
-            "SupplierSubrangeSortNumber",
-            "LastChangeDateTime",
-            "IsEndOfPurposeBlocked",
-            "to_PurgInfoRecdOrgPlantData"
-          ]
-        }
-      },
-      "A_PurchasingInfoRecordByKeyExpandOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "to_PurgInfoRecdOrgPlantData"
-          ]
-        }
-      },
       "PurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecordOrderByOptions": {
         "type": "array",
         "uniqueItems": true,
@@ -8690,82 +8639,6 @@
           ]
         }
       },
-      "A_PurgInfoRecdOrgPlantDataByKeySelectOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "PurchasingInfoRecord",
-            "PurchasingInfoRecordCategory",
-            "PurchasingOrganization",
-            "Plant",
-            "CreatedByUser",
-            "IsMarkedForDeletion",
-            "PurchasingGroup",
-            "Currency",
-            "MinimumPurchaseOrderQuantity",
-            "StandardPurchaseOrderQuantity",
-            "MaterialPlannedDeliveryDurn",
-            "OverdelivTolrtdLmtRatioInPct",
-            "UnderdelivTolrtdLmtRatioInPct",
-            "UnlimitedOverdeliveryIsAllowed",
-            "LastReferencingPurchaseOrder",
-            "LastReferencingPurOrderItem",
-            "Material",
-            "Supplier",
-            "MaterialGroup",
-            "PurgDocOrderQuantityUnit",
-            "NetPriceQuantityUnit",
-            "NetPriceAmount",
-            "PurgInfoRecdEffctvPrc",
-            "MaterialPriceUnitQty",
-            "PurchaseOrderPriceUnit",
-            "PriceValidityEndDate",
-            "ShippingInstruction",
-            "InvoiceIsGoodsReceiptBased",
-            "TaxCode",
-            "IncotermsClassification",
-            "IncotermsTransferLocation",
-            "IncotermsLocation1",
-            "MaximumOrderQuantity",
-            "IsRelevantForAutomSrcg",
-            "SupplierQuotation",
-            "SupplierQuotationDate",
-            "MinRemainingShelfLife",
-            "IsEvaluatedRcptSettlmtAllowed",
-            "IsPurOrderAllwdForInbDeliv",
-            "IsOrderAcknRqd",
-            "IsRetMatlAuthznRqdBySupplier",
-            "IsCashDiscountGranted",
-            "MaterialConditionGroup",
-            "PurchasingDocumentDate",
-            "ShelfLifeExpirationDatePeriod",
-            "IsEndOfPurposeBlocked",
-            "SupplierConfirmationControlKey",
-            "PricingDateControl",
-            "TimeDependentTaxValidFromDate",
-            "TaxCountry",
-            "MaterialRoundingProfile",
-            "MatlMstrTxtIsNotRlvtForPOItm",
-            "to_PurgInfoRecd",
-            "to_PurInfoRecdPrcgCndnValidity",
-            "to_PurInfoRecdPurOrgText"
-          ]
-        }
-      },
-      "A_PurgInfoRecdOrgPlantDataByKeyExpandOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "to_PurgInfoRecd",
-            "to_PurInfoRecdPrcgCndnValidity",
-            "to_PurInfoRecdPurOrgText"
-          ]
-        }
-      },
       "PurgInfoRecdOfA_PurgInfoRecdOrgPlantDataSelectOptions": {
         "type": "array",
         "uniqueItems": true,
@@ -8975,24 +8848,6 @@
           ]
         }
       },
-      "A_PurgInfoRecdOrgPOTextByKeySelectOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "Language",
-            "DocumentText",
-            "TechnicalObjectType",
-            "ArchObjectNumber",
-            "PurchasingInfoRecord",
-            "PurchasingOrganization",
-            "PurchasingInfoRecordCategory",
-            "Plant",
-            "NoteDescription"
-          ]
-        }
-      },
       "A_PurInfoRecdPrcgCndnOrderByOptions": {
         "type": "array",
         "uniqueItems": true,
@@ -9141,72 +8996,6 @@
         }
       },
       "A_PurInfoRecdPrcgCndnExpandOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "to_PurgInfoPricingCndnRecdScale",
-            "to_PurInfoRecdPrcgCndnValidity",
-            "to_PurInfoRecdSuplmntPrcgCndn"
-          ]
-        }
-      },
-      "A_PurInfoRecdPrcgCndnByKeySelectOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "ConditionRecord",
-            "ConditionSequentialNumber",
-            "ConditionApplication",
-            "ConditionType",
-            "ConditionValidityEndDate",
-            "ConditionValidityStartDate",
-            "CreatedByUser",
-            "CreationDate",
-            "ConditionTextID",
-            "PricingScaleType",
-            "PricingScaleBasis",
-            "ConditionScaleQuantity",
-            "ConditionScaleQuantityUnit",
-            "ConditionScaleAmount",
-            "ConditionScaleAmountCurrency",
-            "ConditionCalculationType",
-            "ConditionRateValue",
-            "ConditionRateValueUnit",
-            "ConditionRateRatioUnit",
-            "ConditionRateRatio",
-            "ConditionCurrency",
-            "ConditionRateAmount",
-            "ConditionQuantity",
-            "ConditionQuantityUnit",
-            "ConditionToBaseQtyNmrtr",
-            "ConditionToBaseQtyDnmntr",
-            "BaseUnit",
-            "ConditionLowerLimit",
-            "ConditionUpperLimit",
-            "ConditionAlternativeCurrency",
-            "ConditionExclusion",
-            "ConditionIsDeleted",
-            "AdditionalValueDays",
-            "FixedValueDate",
-            "PaymentTerms",
-            "CndnMaxNumberOfSalesOrders",
-            "MinimumConditionBasisValue",
-            "MaximumConditionBasisValue",
-            "MaximumConditionAmount",
-            "IncrementalScale",
-            "PricingScaleLine",
-            "ConditionReleaseStatus",
-            "to_PurgInfoPricingCndnRecdScale",
-            "to_PurInfoRecdPrcgCndnValidity",
-            "to_PurInfoRecdSuplmntPrcgCndn"
-          ]
-        }
-      },
-      "A_PurInfoRecdPrcgCndnByKeyExpandOptions": {
         "type": "array",
         "uniqueItems": true,
         "items": {
@@ -9569,29 +9358,6 @@
           ]
         }
       },
-      "A_PurInfoRecdPrcgCndnScaleByKeySelectOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "ConditionRecord",
-            "ConditionSequentialNumber",
-            "ConditionScaleLine",
-            "ConditionScaleQuantity",
-            "ConditionScaleQuantityUnit",
-            "ConditionScaleAmount",
-            "ConditionScaleAmountCurrency",
-            "ConditionRateValue",
-            "ConditionRateValueUnit",
-            "ConditionRateRatioUnit",
-            "ConditionRateRatio",
-            "ConditionCurrency",
-            "ConditionRateAmount",
-            "ConditionScaleIsDeleted"
-          ]
-        }
-      },
       "A_PurInfoRecdPrcgCndnValidityOrderByOptions": {
         "type": "array",
         "uniqueItems": true,
@@ -9653,43 +9419,6 @@
         }
       },
       "A_PurInfoRecdPrcgCndnValidityExpandOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "to_PurgInfoRecd",
-            "to_PurgInfoRecdOrgPlantData",
-            "to_PurInfoRecdPrcgCndn"
-          ]
-        }
-      },
-      "A_PurInfoRecdPrcgCndnValidityByKeySelectOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "ConditionRecord",
-            "ConditionValidityEndDate",
-            "ConditionValidityStartDate",
-            "ConditionApplication",
-            "ConditionType",
-            "PurgDocOrderQuantityUnit",
-            "PurchasingOrganization",
-            "PurchasingInfoRecordCategory",
-            "PurchasingInfoRecord",
-            "Supplier",
-            "MaterialGroup",
-            "Material",
-            "Plant",
-            "to_PurgInfoRecd",
-            "to_PurgInfoRecdOrgPlantData",
-            "to_PurInfoRecdPrcgCndn"
-          ]
-        }
-      },
-      "A_PurInfoRecdPrcgCndnValidityByKeyExpandOptions": {
         "type": "array",
         "uniqueItems": true,
         "items": {
@@ -10042,72 +9771,6 @@
         }
       },
       "A_PurInfoRecdSuplmntPrcgCndnExpandOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "to_PurgInfoPricingCndnRecdScale",
-            "to_PurInfoRecdPrcgCndn",
-            "to_PurInfoRecdPrcgCndnValidity"
-          ]
-        }
-      },
-      "A_PurInfoRecdSuplmntPrcgCndnByKeySelectOptions": {
-        "type": "array",
-        "uniqueItems": true,
-        "items": {
-          "type": "string",
-          "enum": [
-            "ConditionRecord",
-            "ConditionSequentialNumber",
-            "ConditionApplication",
-            "ConditionType",
-            "ConditionValidityEndDate",
-            "ConditionValidityStartDate",
-            "CreatedByUser",
-            "CreationDate",
-            "ConditionTextID",
-            "PricingScaleType",
-            "PricingScaleBasis",
-            "ConditionScaleQuantity",
-            "ConditionScaleQuantityUnit",
-            "ConditionScaleAmount",
-            "ConditionScaleAmountCurrency",
-            "ConditionCalculationType",
-            "ConditionRateValue",
-            "ConditionRateValueUnit",
-            "ConditionRateRatioUnit",
-            "ConditionRateRatio",
-            "ConditionCurrency",
-            "ConditionRateAmount",
-            "ConditionQuantity",
-            "ConditionQuantityUnit",
-            "ConditionToBaseQtyNmrtr",
-            "ConditionToBaseQtyDnmntr",
-            "BaseUnit",
-            "ConditionLowerLimit",
-            "ConditionUpperLimit",
-            "ConditionAlternativeCurrency",
-            "ConditionExclusion",
-            "ConditionIsDeleted",
-            "AdditionalValueDays",
-            "FixedValueDate",
-            "PaymentTerms",
-            "CndnMaxNumberOfSalesOrders",
-            "MinimumConditionBasisValue",
-            "MaximumConditionBasisValue",
-            "MaximumConditionAmount",
-            "IncrementalScale",
-            "PricingScaleLine",
-            "ConditionReleaseStatus",
-            "to_PurgInfoPricingCndnRecdScale",
-            "to_PurInfoRecdPrcgCndn",
-            "to_PurInfoRecdPrcgCndnValidity"
-          ]
-        }
-      },
-      "A_PurInfoRecdSuplmntPrcgCndnByKeyExpandOptions": {
         "type": "array",
         "uniqueItems": true,
         "items": {
@@ -10383,7 +10046,7 @@
         "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurchasingInfoRecordByKeySelectOptions"
+          "$ref": "#/components/schemas/A_PurchasingInfoRecordSelectOptions"
         }
       },
       "A_PurchasingInfoRecordByKeyExpandOptions": {
@@ -10392,7 +10055,7 @@
         "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurchasingInfoRecordByKeyExpandOptions"
+          "$ref": "#/components/schemas/A_PurchasingInfoRecordExpandOptions"
         }
       },
       "PurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecordOrderByOptions": {
@@ -10455,7 +10118,7 @@
         "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurgInfoRecdOrgPlantDataByKeySelectOptions"
+          "$ref": "#/components/schemas/A_PurgInfoRecdOrgPlantDataSelectOptions"
         }
       },
       "A_PurgInfoRecdOrgPlantDataByKeyExpandOptions": {
@@ -10464,7 +10127,7 @@
         "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurgInfoRecdOrgPlantDataByKeyExpandOptions"
+          "$ref": "#/components/schemas/A_PurgInfoRecdOrgPlantDataExpandOptions"
         }
       },
       "PurgInfoRecdOfA_PurgInfoRecdOrgPlantDataSelectOptions": {
@@ -10554,7 +10217,7 @@
         "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurgInfoRecdOrgPOTextByKeySelectOptions"
+          "$ref": "#/components/schemas/A_PurgInfoRecdOrgPOTextSelectOptions"
         }
       },
       "A_PurInfoRecdPrcgCndnOrderByOptions": {
@@ -10590,7 +10253,7 @@
         "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnByKeySelectOptions"
+          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnSelectOptions"
         }
       },
       "A_PurInfoRecdPrcgCndnByKeyExpandOptions": {
@@ -10599,7 +10262,7 @@
         "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnByKeyExpandOptions"
+          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnExpandOptions"
         }
       },
       "PurgInfoPricingCndnRecdScaleOfA_PurInfoRecdPrcgCndnOrderByOptions": {
@@ -10698,7 +10361,7 @@
         "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnScaleByKeySelectOptions"
+          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnScaleSelectOptions"
         }
       },
       "A_PurInfoRecdPrcgCndnValidityOrderByOptions": {
@@ -10734,7 +10397,7 @@
         "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnValidityByKeySelectOptions"
+          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnValiditySelectOptions"
         }
       },
       "A_PurInfoRecdPrcgCndnValidityByKeyExpandOptions": {
@@ -10743,7 +10406,7 @@
         "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnValidityByKeyExpandOptions"
+          "$ref": "#/components/schemas/A_PurInfoRecdPrcgCndnValidityExpandOptions"
         }
       },
       "PurgInfoRecdOfA_PurInfoRecdPrcgCndnValiditySelectOptions": {
@@ -10833,7 +10496,7 @@
         "description": "Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurInfoRecdSuplmntPrcgCndnByKeySelectOptions"
+          "$ref": "#/components/schemas/A_PurInfoRecdSuplmntPrcgCndnSelectOptions"
         }
       },
       "A_PurInfoRecdSuplmntPrcgCndnByKeyExpandOptions": {
@@ -10842,7 +10505,7 @@
         "description": "Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)",
         "explode": false,
         "schema": {
-          "$ref": "#/components/schemas/A_PurInfoRecdSuplmntPrcgCndnByKeyExpandOptions"
+          "$ref": "#/components/schemas/A_PurInfoRecdSuplmntPrcgCndnExpandOptions"
         }
       },
       "PurgInfoPricingCndnRecdScaleOfA_PurInfoRecdSuplmntPrcgCndnOrderByOptions": {

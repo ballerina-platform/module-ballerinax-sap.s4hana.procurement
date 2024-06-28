@@ -53,7 +53,7 @@ service /sap/opu/odata/sap/API_INFORECORD_PROCESS_SRV on ep0 {
     # + return - returns can be any of following types 
     # http:Ok (Retrieved entities)
     # http:Response (Error)
-    resource function get A_PurchasingInfoRecord(int? \$top, int? \$skip, string? \$filter, "allpages"|"none"? \$inlinecount, A_PurchasingInfoRecordOrderByOptions? \$orderby, A_PurchasingInfoRecordSelectOptions? \$select, A_PurchasingInfoRecordExpandOptions? \$expand) returns Wrapper|http:Response {
+    resource function get A_PurchasingInfoRecord(int? \$top, int? \$skip, string? \$filter, "allpages"|"none"? \$inlinecount, A_PurchasingInfoRecordOrderByOptions? \$orderby, A_PurchasingInfoRecordSelectOptions? \$select, A_PurchasingInfoRecordExpandOptions? \$expand) returns CollectionOfA_PurchasingInfoRecordWrapper|http:Response {
         return {
             d: {
                 results: [
@@ -71,7 +71,7 @@ service /sap/opu/odata/sap/API_INFORECORD_PROCESS_SRV on ep0 {
     # + return - returns can be any of following types 
     # http:Created (Created entity)
     # http:Response (Error)
-    resource function post A_PurchasingInfoRecord(@http:Payload CreateA_PurchasingInfoRecord payload) returns A_PurchasingInfoRecordType|http:Response {
+    resource function post A_PurchasingInfoRecord(@http:Payload CreateA_PurchasingInfoRecord payload) returns A_PurchasingInfoRecord|http:Response {
         http:Response res = new;
         res.statusCode = 500;
         return res;

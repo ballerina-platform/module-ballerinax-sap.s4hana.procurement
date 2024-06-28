@@ -155,11 +155,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "Wrapper",
+                  "title": "CollectionOfA_PurchasingInfoRecordWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
-                      "title": "Collection of A_PurchasingInfoRecordType",
+                      "title": "CollectionOfA_PurchasingInfoRecord",
                       "type": "object",
                       "properties": {
                         "__count": {
@@ -207,7 +207,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "A_PurchasingInfoRecordType",
+                  "title": "A_PurchasingInfoRecordWrapper",
                   "type": "object",
                   "properties": {
                     "d": {
