@@ -21,6 +21,10 @@ import ballerina/constraint;
 
 public type A_PurchasingInfoRecordExpandOptions ("to_PurgInfoRecdOrgPlantData")[];
 
+public type A_PurchasingInfoRecordWrapper record {
+    A_PurchasingInfoRecord d?;
+};
+
 public type A_PurInfoRecdPrcgCndn_to_PurgInfoPricingCndnRecdScale record {
     A_PurInfoRecdPrcgCndnScale[] results?;
 };
@@ -136,6 +140,11 @@ public type A_PurInfoRecdSuplmntPrcgCndn record {
     A_PurgInfoRecdOrgPlantData_to_PurInfoRecdPrcgCndnValidity to_PurInfoRecdPrcgCndnValidity?;
 };
 
+public type CollectionOfA_PurchasingInfoRecord record {
+    count __count?;
+    A_PurchasingInfoRecord[] results?;
+};
+
 public type CreateA_PurInfoRecdSuplmntPrcgCndn record {
     # Number of Condition Record
     @constraint:String {maxLength: 10}
@@ -247,6 +256,10 @@ public type CreateA_PurgInfoRecdOrgPOText record {
     string? NoteDescription?;
 };
 
+public type CollectionOfA_PurchasingInfoRecordWrapper record {
+    CollectionOfA_PurchasingInfoRecord d?;
+};
+
 public type A_PurgInfoRecdOrgPlantData_to_PurInfoRecdPurOrgText record {
     A_PurgInfoRecdOrgPOText[] results?;
 };
@@ -288,10 +301,6 @@ public type A_PurchasingInfoRecordSelectOptions ("PurchasingInfoRecord"|"Supplie
 
 public type CreateA_PurchasingInfoRecord_to_PurgInfoRecdOrgPlantData record {
     CreateA_PurgInfoRecdOrgPlantData[] results?;
-};
-
-public type Wrapper record {
-    Collection\ of\ A_PurchasingInfoRecordType d?;
 };
 
 public type A_PurInfoRecdPrcgCndnValidity record {
@@ -895,13 +904,4 @@ public type CreateA_PurInfoRecdPrcgCndn record {
     CreateA_PurInfoRecdPrcgCndn_to_PurgInfoPricingCndnRecdScale to_PurgInfoPricingCndnRecdScale?;
     CreateA_PurgInfoRecdOrgPlantData_to_PurInfoRecdPrcgCndnValidity to_PurInfoRecdPrcgCndnValidity?;
     CreateA_PurInfoRecdPrcgCndn_to_PurInfoRecdSuplmntPrcgCndn to_PurInfoRecdSuplmntPrcgCndn?;
-};
-
-public type Collection\ of\ A_PurchasingInfoRecordType record {
-    count __count?;
-    A_PurchasingInfoRecord[] results?;
-};
-
-public type A_PurchasingInfoRecordType record {
-    A_PurchasingInfoRecord d?;
 };

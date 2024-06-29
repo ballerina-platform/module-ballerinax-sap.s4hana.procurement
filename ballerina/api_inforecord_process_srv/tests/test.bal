@@ -65,7 +65,7 @@ function initializeClientsForS4HanaServer() returns error? {
 @test:Config {
 }
 function testListA_PurchasingInfoRecords() returns error? {
-    Wrapper listPurchasingInfoRecords = check s4HanaClient->listA_PurchasingInfoRecords();
+    CollectionOfA_PurchasingInfoRecordWrapper listPurchasingInfoRecords = check s4HanaClient->listA_PurchasingInfoRecords();
     test:assertTrue(listPurchasingInfoRecords.d?.results !is (), "The purchasing info record is expected to be non-empty.");
 }
 
@@ -73,7 +73,7 @@ function testListA_PurchasingInfoRecords() returns error? {
 @test:Config {
 }
 function testCreateAP() returns error? {
-    A_PurchasingInfoRecordType|error purchasingInfoRecord = s4HanaClient->createA_PurchasingInfoRecord({
+    A_PurchasingInfoRecordWrapper|error purchasingInfoRecord = s4HanaClient->createA_PurchasingInfoRecord({
         PurchasingInfoRecord: "123456"
     });
     test:assertTrue(purchasingInfoRecord is error, "The purchasing info record response expected to be 500");

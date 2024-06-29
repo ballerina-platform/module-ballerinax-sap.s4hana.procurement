@@ -119,9 +119,13 @@ public type PurgInfoPricingCndnRecdScaleOfA_PurInfoRecdPrcgCndnOrderByOptions ("
 # Represents the Queries record for the operation: getA_PurInfoRecdPrcgCndn
 public type GetA_PurInfoRecdPrcgCndnQueries record {
     # Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)
-    A_PurInfoRecdPrcgCndnByKeyExpandOptions \$expand?;
+    A_PurInfoRecdPrcgCndnExpandOptions \$expand?;
     # Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)
-    A_PurInfoRecdPrcgCndnByKeySelectOptions \$select?;
+    A_PurInfoRecdPrcgCndnSelectOptions \$select?;
+};
+
+public type CollectionOfA_PurgInfoRecdOrgPlantDataWrapper record {
+    CollectionOfA_PurgInfoRecdOrgPlantData d?;
 };
 
 public type UpdateA_PurInfoRecdPrcgCndnValidity record {
@@ -165,6 +169,15 @@ public type ListPurInfoRecdPrcgCndnValiditiesOfA_PurgInfoRecdOrgPlantDataQueries
 
 public type Modified\ A_PurchasingInfoRecordType record {
     UpdateA_PurchasingInfoRecord d?;
+};
+
+public type A_PurInfoRecdPrcgCndnValidityWrapper record {
+    A_PurInfoRecdPrcgCndnValidity d?;
+};
+
+public type CollectionOfA_PurgInfoRecdOrgPOText record {
+    count __count?;
+    A_PurgInfoRecdOrgPOText[] results?;
 };
 
 public type CreateA_PurgInfoRecdOrgPlantData_to_PurInfoRecdPrcgCndnValidity record {
@@ -332,8 +345,8 @@ public type ConnectionConfig record {|
 
 public type A_PurchasingInfoRecordSelectOptions ("PurchasingInfoRecord"|"Supplier"|"Material"|"MaterialGroup"|"CreationDate"|"IsDeleted"|"PurchasingInfoRecordDesc"|"PurgInfoRecNonStockItmSortTerm"|"PurgDocOrderQuantityUnit"|"OrderItemQtyToBaseQtyNmrtr"|"OrderItemQtyToBaseQtyDnmntr"|"SupplierMaterialNumber"|"SupplierRespSalesPersonName"|"SupplierPhoneNumber"|"BaseUnit"|"SupplierMaterialGroup"|"PriorSupplier"|"AvailabilityStartDate"|"AvailabilityEndDate"|"VarblPurOrdUnitIsActive"|"Manufacturer"|"IsRegularSupplier"|"SupplierSubrange"|"NoDaysReminder1"|"NoDaysReminder2"|"NoDaysReminder3"|"ProductPurchasePointsQty"|"ProductPurchasePointsQtyUnit"|"SupplierSubrangeSortNumber"|"LastChangeDateTime"|"IsEndOfPurposeBlocked"|"to_PurgInfoRecdOrgPlantData")[];
 
-public type Wrapper record {
-    Collection\ of\ A_PurchasingInfoRecordType d?;
+public type A_PurgInfoRecdOrgPlantDataWrapper record {
+    A_PurgInfoRecdOrgPlantData d?;
 };
 
 public type CreateA_PurgInfoRecdOrgPlantData_to_PurInfoRecdPurOrgText record {
@@ -472,8 +485,8 @@ public type CreateA_PurInfoRecdPrcgCndn record {
     CreateA_PurInfoRecdPrcgCndn_to_PurInfoRecdSuplmntPrcgCndn to_PurInfoRecdSuplmntPrcgCndn?;
 };
 
-public type A_PurInfoRecdPrcgCndnValidityType record {
-    A_PurInfoRecdPrcgCndnValidity d?;
+public type CollectionOfA_PurInfoRecdPrcgCndnWrapper record {
+    CollectionOfA_PurInfoRecdPrcgCndn d?;
 };
 
 # Represents the Queries record for the operation: getPurgInfoRecdOfA_PurgInfoRecdOrgPlantData
@@ -484,15 +497,16 @@ public type GetPurgInfoRecdOfA_PurgInfoRecdOrgPlantDataQueries record {
     PurgInfoRecdOfA_PurgInfoRecdOrgPlantDataSelectOptions \$select?;
 };
 
-public type A_PurInfoRecdPrcgCndnValidityByKeySelectOptions ("ConditionRecord"|"ConditionValidityEndDate"|"ConditionValidityStartDate"|"ConditionApplication"|"ConditionType"|"PurgDocOrderQuantityUnit"|"PurchasingOrganization"|"PurchasingInfoRecordCategory"|"PurchasingInfoRecord"|"Supplier"|"MaterialGroup"|"Material"|"Plant"|"to_PurgInfoRecd"|"to_PurgInfoRecdOrgPlantData"|"to_PurInfoRecdPrcgCndn")[];
+public type CollectionOfA_PurInfoRecdSuplmntPrcgCndn record {
+    count __count?;
+    A_PurInfoRecdSuplmntPrcgCndn[] results?;
+};
 
 # Represents the Queries record for the operation: getA_PurgInfoRecdOrgPOText
 public type GetA_PurgInfoRecdOrgPOTextQueries record {
     # Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)
-    A_PurgInfoRecdOrgPOTextByKeySelectOptions \$select?;
+    A_PurgInfoRecdOrgPOTextSelectOptions \$select?;
 };
-
-public type A_PurgInfoRecdOrgPlantDataByKeyExpandOptions ("to_PurgInfoRecd"|"to_PurInfoRecdPrcgCndnValidity"|"to_PurInfoRecdPurOrgText")[];
 
 # Represents the Queries record for the operation: getPurgInfoRecdOrgPlantDataOfA_PurInfoRecdPrcgCndnValidity
 public type GetPurgInfoRecdOrgPlantDataOfA_PurInfoRecdPrcgCndnValidityQueries record {
@@ -505,7 +519,7 @@ public type GetPurgInfoRecdOrgPlantDataOfA_PurInfoRecdPrcgCndnValidityQueries re
 # Represents the Queries record for the operation: getA_PurInfoRecdPrcgCndnScale
 public type GetA_PurInfoRecdPrcgCndnScaleQueries record {
     # Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)
-    A_PurInfoRecdPrcgCndnScaleByKeySelectOptions \$select?;
+    A_PurInfoRecdPrcgCndnScaleSelectOptions \$select?;
 };
 
 public type PurgInfoRecdOfA_PurgInfoRecdOrgPlantDataExpandOptions ("to_PurgInfoRecdOrgPlantData")[];
@@ -515,20 +529,9 @@ public type A_PurchasingInfoRecordExpandOptions ("to_PurgInfoRecdOrgPlantData")[
 # Represents the Queries record for the operation: getA_PurInfoRecdPrcgCndnValidity
 public type GetA_PurInfoRecdPrcgCndnValidityQueries record {
     # Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)
-    A_PurInfoRecdPrcgCndnValidityByKeyExpandOptions \$expand?;
+    A_PurInfoRecdPrcgCndnValidityExpandOptions \$expand?;
     # Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)
-    A_PurInfoRecdPrcgCndnValidityByKeySelectOptions \$select?;
-};
-
-public type Collection\ of\ A_PurInfoRecdPrcgCndnValidityType record {
-    count __count?;
-    A_PurInfoRecdPrcgCndnValidity[] results?;
-};
-
-public type A_PurchasingInfoRecordByKeySelectOptions ("PurchasingInfoRecord"|"Supplier"|"Material"|"MaterialGroup"|"CreationDate"|"IsDeleted"|"PurchasingInfoRecordDesc"|"PurgInfoRecNonStockItmSortTerm"|"PurgDocOrderQuantityUnit"|"OrderItemQtyToBaseQtyNmrtr"|"OrderItemQtyToBaseQtyDnmntr"|"SupplierMaterialNumber"|"SupplierRespSalesPersonName"|"SupplierPhoneNumber"|"BaseUnit"|"SupplierMaterialGroup"|"PriorSupplier"|"AvailabilityStartDate"|"AvailabilityEndDate"|"VarblPurOrdUnitIsActive"|"Manufacturer"|"IsRegularSupplier"|"SupplierSubrange"|"NoDaysReminder1"|"NoDaysReminder2"|"NoDaysReminder3"|"ProductPurchasePointsQty"|"ProductPurchasePointsQtyUnit"|"SupplierSubrangeSortNumber"|"LastChangeDateTime"|"IsEndOfPurposeBlocked"|"to_PurgInfoRecdOrgPlantData")[];
-
-public type A_PurgInfoRecdOrgPOTextType record {
-    A_PurgInfoRecdOrgPOText d?;
+    A_PurInfoRecdPrcgCndnValiditySelectOptions \$select?;
 };
 
 # Represents the Queries record for the operation: listPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdPrcgCndn
@@ -551,15 +554,7 @@ public type A_PurInfoRecdPrcgCndn_to_PurgInfoPricingCndnRecdScale record {
     A_PurInfoRecdPrcgCndnScale[] results?;
 };
 
-public type A_PurInfoRecdPrcgCndnValidityByKeyExpandOptions ("to_PurgInfoRecd"|"to_PurgInfoRecdOrgPlantData"|"to_PurInfoRecdPrcgCndn")[];
-
-public type A_PurInfoRecdPrcgCndnScaleType record {
-    A_PurInfoRecdPrcgCndnScale d?;
-};
-
 public type PurInfoRecdPrcgCndnValidityOfA_PurgInfoRecdOrgPlantDataSelectOptions ("ConditionRecord"|"ConditionValidityEndDate"|"ConditionValidityStartDate"|"ConditionApplication"|"ConditionType"|"PurgDocOrderQuantityUnit"|"PurchasingOrganization"|"PurchasingInfoRecordCategory"|"PurchasingInfoRecord"|"Supplier"|"MaterialGroup"|"Material"|"Plant"|"to_PurgInfoRecd"|"to_PurgInfoRecdOrgPlantData"|"to_PurInfoRecdPrcgCndn")[];
-
-public type A_PurInfoRecdSuplmntPrcgCndnByKeySelectOptions ("ConditionRecord"|"ConditionSequentialNumber"|"ConditionApplication"|"ConditionType"|"ConditionValidityEndDate"|"ConditionValidityStartDate"|"CreatedByUser"|"CreationDate"|"ConditionTextID"|"PricingScaleType"|"PricingScaleBasis"|"ConditionScaleQuantity"|"ConditionScaleQuantityUnit"|"ConditionScaleAmount"|"ConditionScaleAmountCurrency"|"ConditionCalculationType"|"ConditionRateValue"|"ConditionRateValueUnit"|"ConditionRateRatioUnit"|"ConditionRateRatio"|"ConditionCurrency"|"ConditionRateAmount"|"ConditionQuantity"|"ConditionQuantityUnit"|"ConditionToBaseQtyNmrtr"|"ConditionToBaseQtyDnmntr"|"BaseUnit"|"ConditionLowerLimit"|"ConditionUpperLimit"|"ConditionAlternativeCurrency"|"ConditionExclusion"|"ConditionIsDeleted"|"AdditionalValueDays"|"FixedValueDate"|"PaymentTerms"|"CndnMaxNumberOfSalesOrders"|"MinimumConditionBasisValue"|"MaximumConditionBasisValue"|"MaximumConditionAmount"|"IncrementalScale"|"PricingScaleLine"|"ConditionReleaseStatus"|"to_PurgInfoPricingCndnRecdScale"|"to_PurInfoRecdPrcgCndn"|"to_PurInfoRecdPrcgCndnValidity")[];
 
 public type PurInfoRecdPurOrgTextOfA_PurgInfoRecdOrgPlantDataOrderByOptions ("Language"|"Language desc"|"DocumentText"|"DocumentText desc"|"TechnicalObjectType"|"TechnicalObjectType desc"|"ArchObjectNumber"|"ArchObjectNumber desc"|"PurchasingInfoRecord"|"PurchasingInfoRecord desc"|"PurchasingOrganization"|"PurchasingOrganization desc"|"PurchasingInfoRecordCategory"|"PurchasingInfoRecordCategory desc"|"Plant"|"Plant desc")[];
 
@@ -594,18 +589,6 @@ public type CreateA_PurgInfoRecdOrgPOText record {
 
 public type UpdateA_PurgInfoRecdOrgPOText record {
     string? NoteDescription?;
-};
-
-public type Wrapper_4 record {
-    Collection\ of\ A_PurInfoRecdPrcgCndnType d?;
-};
-
-public type Wrapper_5 record {
-    Collection\ of\ A_PurInfoRecdPrcgCndnScaleType d?;
-};
-
-public type Wrapper_6 record {
-    Collection\ of\ A_PurInfoRecdSuplmntPrcgCndnType d?;
 };
 
 public type UpdateA_PurInfoRecdSuplmntPrcgCndn record {
@@ -681,19 +664,7 @@ public type UpdateA_PurInfoRecdSuplmntPrcgCndn record {
     string? ConditionReleaseStatus?;
 };
 
-public type Wrapper_1 record {
-    Collection\ of\ A_PurgInfoRecdOrgPlantDataType d?;
-};
-
 public type PurInfoRecdPrcgCndnOfA_PurInfoRecdSuplmntPrcgCndnExpandOptions ("to_PurgInfoPricingCndnRecdScale"|"to_PurInfoRecdPrcgCndnValidity"|"to_PurInfoRecdSuplmntPrcgCndn")[];
-
-public type Wrapper_2 record {
-    Collection\ of\ A_PurInfoRecdPrcgCndnValidityType d?;
-};
-
-public type Wrapper_3 record {
-    Collection\ of\ A_PurgInfoRecdOrgPOTextType d?;
-};
 
 public type A_PurgInfoRecdOrgPlantDataExpandOptions ("to_PurgInfoRecd"|"to_PurInfoRecdPrcgCndnValidity"|"to_PurInfoRecdPurOrgText")[];
 
@@ -894,12 +865,11 @@ public type A_PurInfoRecdPrcgCndn record {
     A_PurInfoRecdPrcgCndn_to_PurInfoRecdSuplmntPrcgCndn to_PurInfoRecdSuplmntPrcgCndn?;
 };
 
-public type PurgInfoPricingCndnRecdScaleOfA_PurInfoRecdSuplmntPrcgCndnSelectOptions ("ConditionRecord"|"ConditionSequentialNumber"|"ConditionScaleLine"|"ConditionScaleQuantity"|"ConditionScaleQuantityUnit"|"ConditionScaleAmount"|"ConditionScaleAmountCurrency"|"ConditionRateValue"|"ConditionRateValueUnit"|"ConditionRateRatioUnit"|"ConditionRateRatio"|"ConditionCurrency"|"ConditionRateAmount"|"ConditionScaleIsDeleted")[];
-
-public type Collection\ of\ A_PurInfoRecdSuplmntPrcgCndnType record {
-    count __count?;
-    A_PurInfoRecdSuplmntPrcgCndn[] results?;
+public type CollectionOfA_PurInfoRecdPrcgCndnValidityWrapper record {
+    CollectionOfA_PurInfoRecdPrcgCndnValidity d?;
 };
+
+public type PurgInfoPricingCndnRecdScaleOfA_PurInfoRecdSuplmntPrcgCndnSelectOptions ("ConditionRecord"|"ConditionSequentialNumber"|"ConditionScaleLine"|"ConditionScaleQuantity"|"ConditionScaleQuantityUnit"|"ConditionScaleAmount"|"ConditionScaleAmountCurrency"|"ConditionRateValue"|"ConditionRateValueUnit"|"ConditionRateRatioUnit"|"ConditionRateRatio"|"ConditionCurrency"|"ConditionRateAmount"|"ConditionScaleIsDeleted")[];
 
 public type A_PurInfoRecdSuplmntPrcgCndnSelectOptions ("ConditionRecord"|"ConditionSequentialNumber"|"ConditionApplication"|"ConditionType"|"ConditionValidityEndDate"|"ConditionValidityStartDate"|"CreatedByUser"|"CreationDate"|"ConditionTextID"|"PricingScaleType"|"PricingScaleBasis"|"ConditionScaleQuantity"|"ConditionScaleQuantityUnit"|"ConditionScaleAmount"|"ConditionScaleAmountCurrency"|"ConditionCalculationType"|"ConditionRateValue"|"ConditionRateValueUnit"|"ConditionRateRatioUnit"|"ConditionRateRatio"|"ConditionCurrency"|"ConditionRateAmount"|"ConditionQuantity"|"ConditionQuantityUnit"|"ConditionToBaseQtyNmrtr"|"ConditionToBaseQtyDnmntr"|"BaseUnit"|"ConditionLowerLimit"|"ConditionUpperLimit"|"ConditionAlternativeCurrency"|"ConditionExclusion"|"ConditionIsDeleted"|"AdditionalValueDays"|"FixedValueDate"|"PaymentTerms"|"CndnMaxNumberOfSalesOrders"|"MinimumConditionBasisValue"|"MaximumConditionBasisValue"|"MaximumConditionAmount"|"IncrementalScale"|"PricingScaleLine"|"ConditionReleaseStatus"|"to_PurgInfoPricingCndnRecdScale"|"to_PurInfoRecdPrcgCndn"|"to_PurInfoRecdPrcgCndnValidity")[];
 
@@ -971,29 +941,16 @@ public type ListA_PurgInfoRecdOrgPlantDataQueries record {
     A_PurgInfoRecdOrgPlantDataSelectOptions \$select?;
 };
 
-public type A_PurchasingInfoRecordType record {
-    A_PurchasingInfoRecord d?;
-};
-
 public type PurInfoRecdPrcgCndnValidityOfA_PurgInfoRecdOrgPlantDataExpandOptions ("to_PurgInfoRecd"|"to_PurgInfoRecdOrgPlantData"|"to_PurInfoRecdPrcgCndn")[];
-
-public type Collection\ of\ A_PurgInfoRecdOrgPlantDataType record {
-    count __count?;
-    A_PurgInfoRecdOrgPlantData[] results?;
-};
-
-public type Collection\ of\ A_PurgInfoRecdOrgPOTextType record {
-    count __count?;
-    A_PurgInfoRecdOrgPOText[] results?;
-};
 
 public type PurInfoRecdPrcgCndnOfA_PurInfoRecdPrcgCndnValidityExpandOptions ("to_PurgInfoPricingCndnRecdScale"|"to_PurInfoRecdPrcgCndnValidity"|"to_PurInfoRecdSuplmntPrcgCndn")[];
 
-public type A_PurInfoRecdPrcgCndnScaleByKeySelectOptions ("ConditionRecord"|"ConditionSequentialNumber"|"ConditionScaleLine"|"ConditionScaleQuantity"|"ConditionScaleQuantityUnit"|"ConditionScaleAmount"|"ConditionScaleAmountCurrency"|"ConditionRateValue"|"ConditionRateValueUnit"|"ConditionRateRatioUnit"|"ConditionRateRatio"|"ConditionCurrency"|"ConditionRateAmount"|"ConditionScaleIsDeleted")[];
-
 public type PurgInfoRecdOfA_PurgInfoRecdOrgPlantDataSelectOptions ("PurchasingInfoRecord"|"Supplier"|"Material"|"MaterialGroup"|"CreationDate"|"IsDeleted"|"PurchasingInfoRecordDesc"|"PurgInfoRecNonStockItmSortTerm"|"PurgDocOrderQuantityUnit"|"OrderItemQtyToBaseQtyNmrtr"|"OrderItemQtyToBaseQtyDnmntr"|"SupplierMaterialNumber"|"SupplierRespSalesPersonName"|"SupplierPhoneNumber"|"BaseUnit"|"SupplierMaterialGroup"|"PriorSupplier"|"AvailabilityStartDate"|"AvailabilityEndDate"|"VarblPurOrdUnitIsActive"|"Manufacturer"|"IsRegularSupplier"|"SupplierSubrange"|"NoDaysReminder1"|"NoDaysReminder2"|"NoDaysReminder3"|"ProductPurchasePointsQty"|"ProductPurchasePointsQtyUnit"|"SupplierSubrangeSortNumber"|"LastChangeDateTime"|"IsEndOfPurposeBlocked"|"to_PurgInfoRecdOrgPlantData")[];
 
-public type A_PurgInfoRecdOrgPlantDataByKeySelectOptions ("PurchasingInfoRecord"|"PurchasingInfoRecordCategory"|"PurchasingOrganization"|"Plant"|"CreatedByUser"|"IsMarkedForDeletion"|"PurchasingGroup"|"Currency"|"MinimumPurchaseOrderQuantity"|"StandardPurchaseOrderQuantity"|"MaterialPlannedDeliveryDurn"|"OverdelivTolrtdLmtRatioInPct"|"UnderdelivTolrtdLmtRatioInPct"|"UnlimitedOverdeliveryIsAllowed"|"LastReferencingPurchaseOrder"|"LastReferencingPurOrderItem"|"Material"|"Supplier"|"MaterialGroup"|"PurgDocOrderQuantityUnit"|"NetPriceQuantityUnit"|"NetPriceAmount"|"PurgInfoRecdEffctvPrc"|"MaterialPriceUnitQty"|"PurchaseOrderPriceUnit"|"PriceValidityEndDate"|"ShippingInstruction"|"InvoiceIsGoodsReceiptBased"|"TaxCode"|"IncotermsClassification"|"IncotermsTransferLocation"|"IncotermsLocation1"|"MaximumOrderQuantity"|"IsRelevantForAutomSrcg"|"SupplierQuotation"|"SupplierQuotationDate"|"MinRemainingShelfLife"|"IsEvaluatedRcptSettlmtAllowed"|"IsPurOrderAllwdForInbDeliv"|"IsOrderAcknRqd"|"IsRetMatlAuthznRqdBySupplier"|"IsCashDiscountGranted"|"MaterialConditionGroup"|"PurchasingDocumentDate"|"ShelfLifeExpirationDatePeriod"|"IsEndOfPurposeBlocked"|"SupplierConfirmationControlKey"|"PricingDateControl"|"TimeDependentTaxValidFromDate"|"TaxCountry"|"MaterialRoundingProfile"|"MatlMstrTxtIsNotRlvtForPOItm"|"to_PurgInfoRecd"|"to_PurInfoRecdPrcgCndnValidity"|"to_PurInfoRecdPurOrgText")[];
+public type CollectionOfA_PurchasingInfoRecord record {
+    count __count?;
+    A_PurchasingInfoRecord[] results?;
+};
 
 public type UpdateA_PurchasingInfoRecord record {
     # Supplier's Account Number
@@ -1051,16 +1008,10 @@ public type UpdateA_PurchasingInfoRecord record {
     string? IsEndOfPurposeBlocked?;
 };
 
-public type A_PurchasingInfoRecordByKeyExpandOptions ("to_PurgInfoRecdOrgPlantData")[];
-
 public type PurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecordExpandOptions ("to_PurgInfoRecd"|"to_PurInfoRecdPrcgCndnValidity"|"to_PurInfoRecdPurOrgText")[];
 
-public type A_PurInfoRecdPrcgCndnType record {
-    A_PurInfoRecdPrcgCndn d?;
-};
-
-public type A_PurgInfoRecdOrgPlantDataType record {
-    A_PurgInfoRecdOrgPlantData d?;
+public type A_PurgInfoRecdOrgPOTextWrapper record {
+    A_PurgInfoRecdOrgPOText d?;
 };
 
 public type PurgInfoPricingCndnRecdScaleOfA_PurInfoRecdSuplmntPrcgCndnOrderByOptions ("ConditionRecord"|"ConditionRecord desc"|"ConditionSequentialNumber"|"ConditionSequentialNumber desc"|"ConditionScaleLine"|"ConditionScaleLine desc"|"ConditionScaleQuantity"|"ConditionScaleQuantity desc"|"ConditionScaleQuantityUnit"|"ConditionScaleQuantityUnit desc"|"ConditionScaleAmount"|"ConditionScaleAmount desc"|"ConditionScaleAmountCurrency"|"ConditionScaleAmountCurrency desc"|"ConditionRateValue"|"ConditionRateValue desc"|"ConditionRateValueUnit"|"ConditionRateValueUnit desc"|"ConditionRateRatioUnit"|"ConditionRateRatioUnit desc"|"ConditionRateRatio"|"ConditionRateRatio desc"|"ConditionCurrency"|"ConditionCurrency desc"|"ConditionRateAmount"|"ConditionRateAmount desc"|"ConditionScaleIsDeleted"|"ConditionScaleIsDeleted desc")[];
@@ -1088,16 +1039,14 @@ public type ListPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdSuplmntPrcgCndnQueri
 # Represents the Queries record for the operation: getA_PurInfoRecdSuplmntPrcgCndn
 public type GetA_PurInfoRecdSuplmntPrcgCndnQueries record {
     # Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)
-    A_PurInfoRecdSuplmntPrcgCndnByKeyExpandOptions \$expand?;
+    A_PurInfoRecdSuplmntPrcgCndnExpandOptions \$expand?;
     # Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)
-    A_PurInfoRecdSuplmntPrcgCndnByKeySelectOptions \$select?;
+    A_PurInfoRecdSuplmntPrcgCndnSelectOptions \$select?;
 };
 
 public type A_PurgInfoRecdOrgPOTextSelectOptions ("Language"|"DocumentText"|"TechnicalObjectType"|"ArchObjectNumber"|"PurchasingInfoRecord"|"PurchasingOrganization"|"PurchasingInfoRecordCategory"|"Plant"|"NoteDescription")[];
 
 public type PurInfoRecdPurOrgTextOfA_PurgInfoRecdOrgPlantDataSelectOptions ("Language"|"DocumentText"|"TechnicalObjectType"|"ArchObjectNumber"|"PurchasingInfoRecord"|"PurchasingOrganization"|"PurchasingInfoRecordCategory"|"Plant"|"NoteDescription")[];
-
-public type A_PurInfoRecdSuplmntPrcgCndnByKeyExpandOptions ("to_PurgInfoPricingCndnRecdScale"|"to_PurInfoRecdPrcgCndn"|"to_PurInfoRecdPrcgCndnValidity")[];
 
 # Represents the Queries record for the operation: listPurInfoRecdSuplmntPrcgCndnsOfA_PurInfoRecdPrcgCndn
 public type ListPurInfoRecdSuplmntPrcgCndnsOfA_PurInfoRecdPrcgCndnQueries record {
@@ -1116,8 +1065,6 @@ public type ListPurInfoRecdSuplmntPrcgCndnsOfA_PurInfoRecdPrcgCndnQueries record
     # Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)
     PurInfoRecdSuplmntPrcgCndnOfA_PurInfoRecdPrcgCndnSelectOptions \$select?;
 };
-
-public type A_PurgInfoRecdOrgPOTextByKeySelectOptions ("Language"|"DocumentText"|"TechnicalObjectType"|"ArchObjectNumber"|"PurchasingInfoRecord"|"PurchasingOrganization"|"PurchasingInfoRecordCategory"|"Plant"|"NoteDescription")[];
 
 public type A_PurInfoRecdPrcgCndnValidityOrderByOptions ("ConditionRecord"|"ConditionRecord desc"|"ConditionValidityEndDate"|"ConditionValidityEndDate desc"|"ConditionValidityStartDate"|"ConditionValidityStartDate desc"|"ConditionApplication"|"ConditionApplication desc"|"ConditionType"|"ConditionType desc"|"PurgDocOrderQuantityUnit"|"PurgDocOrderQuantityUnit desc"|"PurchasingOrganization"|"PurchasingOrganization desc"|"PurchasingInfoRecordCategory"|"PurchasingInfoRecordCategory desc"|"PurchasingInfoRecord"|"PurchasingInfoRecord desc"|"Supplier"|"Supplier desc"|"MaterialGroup"|"MaterialGroup desc"|"Material"|"Material desc"|"Plant"|"Plant desc")[];
 
@@ -1178,6 +1125,10 @@ public type A_PurInfoRecdPrcgCndnValidity record {
     A_PurchasingInfoRecord to_PurgInfoRecd?;
     A_PurgInfoRecdOrgPlantData to_PurgInfoRecdOrgPlantData?;
     A_PurInfoRecdPrcgCndn to_PurInfoRecdPrcgCndn?;
+};
+
+public type A_PurInfoRecdSuplmntPrcgCndnWrapper record {
+    A_PurInfoRecdSuplmntPrcgCndn d?;
 };
 
 # Represents the Queries record for the operation: listA_PurgInfoRecdOrgPOTexts
@@ -1513,6 +1464,11 @@ public type Modified\ A_PurInfoRecdPrcgCndnScaleType record {
     UpdateA_PurInfoRecdPrcgCndnScale d?;
 };
 
+public type CollectionOfA_PurInfoRecdPrcgCndn record {
+    count __count?;
+    A_PurInfoRecdPrcgCndn[] results?;
+};
+
 public type UpdateA_PurInfoRecdPrcgCndnScale record {
     # Condition Scale Quantity
     string? ConditionScaleQuantity?;
@@ -1541,6 +1497,11 @@ public type A_PurInfoRecdPrcgCndnScaleSelectOptions ("ConditionRecord"|"Conditio
 
 public type PurgInfoRecdOfA_PurInfoRecdPrcgCndnValiditySelectOptions ("PurchasingInfoRecord"|"Supplier"|"Material"|"MaterialGroup"|"CreationDate"|"IsDeleted"|"PurchasingInfoRecordDesc"|"PurgInfoRecNonStockItmSortTerm"|"PurgDocOrderQuantityUnit"|"OrderItemQtyToBaseQtyNmrtr"|"OrderItemQtyToBaseQtyDnmntr"|"SupplierMaterialNumber"|"SupplierRespSalesPersonName"|"SupplierPhoneNumber"|"BaseUnit"|"SupplierMaterialGroup"|"PriorSupplier"|"AvailabilityStartDate"|"AvailabilityEndDate"|"VarblPurOrdUnitIsActive"|"Manufacturer"|"IsRegularSupplier"|"SupplierSubrange"|"NoDaysReminder1"|"NoDaysReminder2"|"NoDaysReminder3"|"ProductPurchasePointsQty"|"ProductPurchasePointsQtyUnit"|"SupplierSubrangeSortNumber"|"LastChangeDateTime"|"IsEndOfPurposeBlocked"|"to_PurgInfoRecdOrgPlantData")[];
 
+public type CollectionOfA_PurInfoRecdPrcgCndnValidity record {
+    count __count?;
+    A_PurInfoRecdPrcgCndnValidity[] results?;
+};
+
 public type Modified\ A_PurInfoRecdSuplmntPrcgCndnType record {
     UpdateA_PurInfoRecdSuplmntPrcgCndn d?;
 };
@@ -1568,6 +1529,10 @@ public type ListPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdPrcgCndnQueries reco
 };
 
 public type PurgInfoPricingCndnRecdScaleOfA_PurInfoRecdPrcgCndnSelectOptions ("ConditionRecord"|"ConditionSequentialNumber"|"ConditionScaleLine"|"ConditionScaleQuantity"|"ConditionScaleQuantityUnit"|"ConditionScaleAmount"|"ConditionScaleAmountCurrency"|"ConditionRateValue"|"ConditionRateValueUnit"|"ConditionRateRatioUnit"|"ConditionRateRatio"|"ConditionCurrency"|"ConditionRateAmount"|"ConditionScaleIsDeleted")[];
+
+public type A_PurchasingInfoRecordWrapper record {
+    A_PurchasingInfoRecord d?;
+};
 
 public type PurgInfoRecdOfA_PurInfoRecdPrcgCndnValidityExpandOptions ("to_PurgInfoRecdOrgPlantData")[];
 
@@ -1801,6 +1766,10 @@ public type UpdateA_PurInfoRecdPrcgCndn record {
     string? ConditionReleaseStatus?;
 };
 
+public type CollectionOfA_PurchasingInfoRecordWrapper record {
+    CollectionOfA_PurchasingInfoRecord d?;
+};
+
 public type PurInfoRecdPrcgCndnValidityOfA_PurInfoRecdPrcgCndnExpandOptions ("to_PurgInfoRecd"|"to_PurgInfoRecdOrgPlantData"|"to_PurInfoRecdPrcgCndn")[];
 
 # OAuth2 Refresh Token Grant Configs
@@ -1818,11 +1787,6 @@ public type Modified\ A_PurgInfoRecdOrgPlantDataType record {
 
 public type A_PurInfoRecdPrcgCndnValiditySelectOptions ("ConditionRecord"|"ConditionValidityEndDate"|"ConditionValidityStartDate"|"ConditionApplication"|"ConditionType"|"PurgDocOrderQuantityUnit"|"PurchasingOrganization"|"PurchasingInfoRecordCategory"|"PurchasingInfoRecord"|"Supplier"|"MaterialGroup"|"Material"|"Plant"|"to_PurgInfoRecd"|"to_PurgInfoRecdOrgPlantData"|"to_PurInfoRecdPrcgCndn")[];
 
-public type Collection\ of\ A_PurInfoRecdPrcgCndnScaleType record {
-    count __count?;
-    A_PurInfoRecdPrcgCndnScale[] results?;
-};
-
 # Represents the Queries record for the operation: getPurgInfoRecdOfA_PurInfoRecdPrcgCndnValidity
 public type GetPurgInfoRecdOfA_PurInfoRecdPrcgCndnValidityQueries record {
     # Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)
@@ -1831,19 +1795,21 @@ public type GetPurgInfoRecdOfA_PurInfoRecdPrcgCndnValidityQueries record {
     PurgInfoRecdOfA_PurInfoRecdPrcgCndnValiditySelectOptions \$select?;
 };
 
+public type CollectionOfA_PurInfoRecdPrcgCndnScaleWrapper record {
+    CollectionOfA_PurInfoRecdPrcgCndnScale d?;
+};
+
 public type PurInfoRecdSuplmntPrcgCndnOfA_PurInfoRecdPrcgCndnExpandOptions ("to_PurgInfoPricingCndnRecdScale"|"to_PurInfoRecdPrcgCndn"|"to_PurInfoRecdPrcgCndnValidity")[];
 
-public type A_PurInfoRecdSuplmntPrcgCndnType record {
-    A_PurInfoRecdSuplmntPrcgCndn d?;
+public type CollectionOfA_PurInfoRecdPrcgCndnScale record {
+    count __count?;
+    A_PurInfoRecdPrcgCndnScale[] results?;
 };
 
 public type PurInfoRecdPrcgCndnValidityOfA_PurInfoRecdPrcgCndnSelectOptions ("ConditionRecord"|"ConditionValidityEndDate"|"ConditionValidityStartDate"|"ConditionApplication"|"ConditionType"|"PurgDocOrderQuantityUnit"|"PurchasingOrganization"|"PurchasingInfoRecordCategory"|"PurchasingInfoRecord"|"Supplier"|"MaterialGroup"|"Material"|"Plant"|"to_PurgInfoRecd"|"to_PurgInfoRecdOrgPlantData"|"to_PurInfoRecdPrcgCndn")[];
 
-public type A_PurInfoRecdPrcgCndnByKeyExpandOptions ("to_PurgInfoPricingCndnRecdScale"|"to_PurInfoRecdPrcgCndnValidity"|"to_PurInfoRecdSuplmntPrcgCndn")[];
-
-public type Collection\ of\ A_PurInfoRecdPrcgCndnType record {
-    count __count?;
-    A_PurInfoRecdPrcgCndn[] results?;
+public type A_PurInfoRecdPrcgCndnWrapper record {
+    A_PurInfoRecdPrcgCndn d?;
 };
 
 # Proxy server configurations to be used with the HTTP client endpoint.
@@ -1868,22 +1834,32 @@ public type CreateA_PurInfoRecdPrcgCndn_to_PurgInfoPricingCndnRecdScale record {
 # Represents the Queries record for the operation: getA_PurchasingInfoRecord
 public type GetA_PurchasingInfoRecordQueries record {
     # Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)
-    A_PurchasingInfoRecordByKeyExpandOptions \$expand?;
+    A_PurchasingInfoRecordExpandOptions \$expand?;
     # Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)
-    A_PurchasingInfoRecordByKeySelectOptions \$select?;
+    A_PurchasingInfoRecordSelectOptions \$select?;
 };
 
 # Represents the Queries record for the operation: getA_PurgInfoRecdOrgPlantData
 public type GetA_PurgInfoRecdOrgPlantDataQueries record {
     # Expand related entities, see [Expand](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=63)
-    A_PurgInfoRecdOrgPlantDataByKeyExpandOptions \$expand?;
+    A_PurgInfoRecdOrgPlantDataExpandOptions \$expand?;
     # Select properties to be returned, see [Select](https://help.sap.com/doc/5890d27be418427993fafa6722cdc03b/Cloud/en-US/OdataV2.pdf#page=68)
-    A_PurgInfoRecdOrgPlantDataByKeySelectOptions \$select?;
+    A_PurgInfoRecdOrgPlantDataSelectOptions \$select?;
 };
 
-public type A_PurInfoRecdPrcgCndnByKeySelectOptions ("ConditionRecord"|"ConditionSequentialNumber"|"ConditionApplication"|"ConditionType"|"ConditionValidityEndDate"|"ConditionValidityStartDate"|"CreatedByUser"|"CreationDate"|"ConditionTextID"|"PricingScaleType"|"PricingScaleBasis"|"ConditionScaleQuantity"|"ConditionScaleQuantityUnit"|"ConditionScaleAmount"|"ConditionScaleAmountCurrency"|"ConditionCalculationType"|"ConditionRateValue"|"ConditionRateValueUnit"|"ConditionRateRatioUnit"|"ConditionRateRatio"|"ConditionCurrency"|"ConditionRateAmount"|"ConditionQuantity"|"ConditionQuantityUnit"|"ConditionToBaseQtyNmrtr"|"ConditionToBaseQtyDnmntr"|"BaseUnit"|"ConditionLowerLimit"|"ConditionUpperLimit"|"ConditionAlternativeCurrency"|"ConditionExclusion"|"ConditionIsDeleted"|"AdditionalValueDays"|"FixedValueDate"|"PaymentTerms"|"CndnMaxNumberOfSalesOrders"|"MinimumConditionBasisValue"|"MaximumConditionBasisValue"|"MaximumConditionAmount"|"IncrementalScale"|"PricingScaleLine"|"ConditionReleaseStatus"|"to_PurgInfoPricingCndnRecdScale"|"to_PurInfoRecdPrcgCndnValidity"|"to_PurInfoRecdSuplmntPrcgCndn")[];
-
-public type Collection\ of\ A_PurchasingInfoRecordType record {
+public type CollectionOfA_PurgInfoRecdOrgPlantData record {
     count __count?;
-    A_PurchasingInfoRecord[] results?;
+    A_PurgInfoRecdOrgPlantData[] results?;
+};
+
+public type CollectionOfA_PurInfoRecdSuplmntPrcgCndnWrapper record {
+    CollectionOfA_PurInfoRecdSuplmntPrcgCndn d?;
+};
+
+public type CollectionOfA_PurgInfoRecdOrgPOTextWrapper record {
+    CollectionOfA_PurgInfoRecdOrgPOText d?;
+};
+
+public type A_PurInfoRecdPrcgCndnScaleWrapper record {
+    A_PurInfoRecdPrcgCndnScale d?;
 };

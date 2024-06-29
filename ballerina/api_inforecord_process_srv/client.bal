@@ -65,7 +65,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createA_PurInfoRecdPrcgCndnScale(CreateA_PurInfoRecdPrcgCndnScale payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnScaleType|error {
+    remote isolated function createA_PurInfoRecdPrcgCndnScale(CreateA_PurInfoRecdPrcgCndnScale payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnScaleWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndnScale`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -78,7 +78,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createA_PurInfoRecdPrcgCndnValidity(CreateA_PurInfoRecdPrcgCndnValidity payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnValidityType|error {
+    remote isolated function createA_PurInfoRecdPrcgCndnValidity(CreateA_PurInfoRecdPrcgCndnValidity payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnValidityWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndnValidity`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -91,7 +91,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createA_PurInfoRecdSuplmntPrcgCndn(CreateA_PurInfoRecdSuplmntPrcgCndn payload, map<string|string[]> headers = {}) returns A_PurInfoRecdSuplmntPrcgCndnType|error {
+    remote isolated function createA_PurInfoRecdSuplmntPrcgCndn(CreateA_PurInfoRecdSuplmntPrcgCndn payload, map<string|string[]> headers = {}) returns A_PurInfoRecdSuplmntPrcgCndnWrapper|error {
         string resourcePath = string `/A_PurInfoRecdSuplmntPrcgCndn`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -104,7 +104,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createA_PurchasingInfoRecord(CreateA_PurchasingInfoRecord payload, map<string|string[]> headers = {}) returns A_PurchasingInfoRecordType|error {
+    remote isolated function createA_PurchasingInfoRecord(CreateA_PurchasingInfoRecord payload, map<string|string[]> headers = {}) returns A_PurchasingInfoRecordWrapper|error {
         string resourcePath = string `/A_PurchasingInfoRecord`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -117,7 +117,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createA_PurgInfoRecdOrgPOText(CreateA_PurgInfoRecdOrgPOText payload, map<string|string[]> headers = {}) returns A_PurgInfoRecdOrgPOTextType|error {
+    remote isolated function createA_PurgInfoRecdOrgPOText(CreateA_PurgInfoRecdOrgPOText payload, map<string|string[]> headers = {}) returns A_PurgInfoRecdOrgPOTextWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPOText`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -130,7 +130,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createA_PurgInfoRecdOrgPlantData(CreateA_PurgInfoRecdOrgPlantData payload, map<string|string[]> headers = {}) returns A_PurgInfoRecdOrgPlantDataType|error {
+    remote isolated function createA_PurgInfoRecdOrgPlantData(CreateA_PurgInfoRecdOrgPlantData payload, map<string|string[]> headers = {}) returns A_PurgInfoRecdOrgPlantDataWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPlantData`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -144,7 +144,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createPurInfoRecdPrcgCndnValidityOfA_PurInfoRecdPrcgCndn(string ConditionRecord, CreateA_PurInfoRecdPrcgCndnValidity payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnValidityType|error {
+    remote isolated function createPurInfoRecdPrcgCndnValidityOfA_PurInfoRecdPrcgCndn(string ConditionRecord, CreateA_PurInfoRecdPrcgCndnValidity payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnValidityWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndn('${getEncodedUri(ConditionRecord)}')/to_PurInfoRecdPrcgCndnValidity`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -159,7 +159,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createPurInfoRecdPrcgCndnValidityOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, CreateA_PurInfoRecdPrcgCndnValidity payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnValidityType|error {
+    remote isolated function createPurInfoRecdPrcgCndnValidityOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, CreateA_PurInfoRecdPrcgCndnValidity payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnValidityWrapper|error {
         string resourcePath = string `/A_PurInfoRecdSuplmntPrcgCndn(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionSequentialNumber='${getEncodedUri(ConditionSequentialNumber)}')/to_PurInfoRecdPrcgCndnValidity`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -176,7 +176,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createPurInfoRecdPrcgCndnValidityOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, CreateA_PurInfoRecdPrcgCndnValidity payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnValidityType|error {
+    remote isolated function createPurInfoRecdPrcgCndnValidityOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, CreateA_PurInfoRecdPrcgCndnValidity payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnValidityWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPlantData(PurchasingInfoRecord='${getEncodedUri(PurchasingInfoRecord)}',PurchasingInfoRecordCategory='${getEncodedUri(PurchasingInfoRecordCategory)}',PurchasingOrganization='${getEncodedUri(PurchasingOrganization)}',Plant='${getEncodedUri(Plant)}')/to_PurInfoRecdPrcgCndnValidity`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -193,7 +193,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createPurInfoRecdPurOrgTextOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, CreateA_PurgInfoRecdOrgPOText payload, map<string|string[]> headers = {}) returns A_PurgInfoRecdOrgPOTextType|error {
+    remote isolated function createPurInfoRecdPurOrgTextOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, CreateA_PurgInfoRecdOrgPOText payload, map<string|string[]> headers = {}) returns A_PurgInfoRecdOrgPOTextWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPlantData(PurchasingInfoRecord='${getEncodedUri(PurchasingInfoRecord)}',PurchasingInfoRecordCategory='${getEncodedUri(PurchasingInfoRecordCategory)}',PurchasingOrganization='${getEncodedUri(PurchasingOrganization)}',Plant='${getEncodedUri(Plant)}')/to_PurInfoRecdPurOrgText`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -207,7 +207,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createPurInfoRecdSuplmntPrcgCndnOfA_PurInfoRecdPrcgCndn(string ConditionRecord, CreateA_PurInfoRecdSuplmntPrcgCndn payload, map<string|string[]> headers = {}) returns A_PurInfoRecdSuplmntPrcgCndnType|error {
+    remote isolated function createPurInfoRecdSuplmntPrcgCndnOfA_PurInfoRecdPrcgCndn(string ConditionRecord, CreateA_PurInfoRecdSuplmntPrcgCndn payload, map<string|string[]> headers = {}) returns A_PurInfoRecdSuplmntPrcgCndnWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndn('${getEncodedUri(ConditionRecord)}')/to_PurInfoRecdSuplmntPrcgCndn`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -221,7 +221,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createPurgInfoPricingCndnRecdScaleOfA_PurInfoRecdPrcgCndn(string ConditionRecord, CreateA_PurInfoRecdPrcgCndnScale payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnScaleType|error {
+    remote isolated function createPurgInfoPricingCndnRecdScaleOfA_PurInfoRecdPrcgCndn(string ConditionRecord, CreateA_PurInfoRecdPrcgCndnScale payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnScaleWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndn('${getEncodedUri(ConditionRecord)}')/to_PurgInfoPricingCndnRecdScale`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -236,7 +236,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createPurgInfoPricingCndnRecdScaleOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, CreateA_PurInfoRecdPrcgCndnScale payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnScaleType|error {
+    remote isolated function createPurgInfoPricingCndnRecdScaleOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, CreateA_PurInfoRecdPrcgCndnScale payload, map<string|string[]> headers = {}) returns A_PurInfoRecdPrcgCndnScaleWrapper|error {
         string resourcePath = string `/A_PurInfoRecdSuplmntPrcgCndn(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionSequentialNumber='${getEncodedUri(ConditionSequentialNumber)}')/to_PurgInfoPricingCndnRecdScale`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -250,7 +250,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + payload - New entity 
     # + return - Created entity 
-    remote isolated function createPurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecord(string PurchasingInfoRecord, CreateA_PurgInfoRecdOrgPlantData payload, map<string|string[]> headers = {}) returns A_PurgInfoRecdOrgPlantDataType|error {
+    remote isolated function createPurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecord(string PurchasingInfoRecord, CreateA_PurgInfoRecdOrgPlantData payload, map<string|string[]> headers = {}) returns A_PurgInfoRecdOrgPlantDataWrapper|error {
         string resourcePath = string `/A_PurchasingInfoRecord('${getEncodedUri(PurchasingInfoRecord)}')/to_PurgInfoRecdOrgPlantData`;
         http:Request request = new;
         json jsonBody = payload.toJson();
@@ -304,7 +304,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getA_PurInfoRecdPrcgCndn(string ConditionRecord, map<string|string[]> headers = {}, *GetA_PurInfoRecdPrcgCndnQueries queries) returns A_PurInfoRecdPrcgCndnType|error {
+    remote isolated function getA_PurInfoRecdPrcgCndn(string ConditionRecord, map<string|string[]> headers = {}, *GetA_PurInfoRecdPrcgCndnQueries queries) returns A_PurInfoRecdPrcgCndnWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndn('${getEncodedUri(ConditionRecord)}')`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -319,7 +319,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getA_PurInfoRecdPrcgCndnScale(string ConditionRecord, string ConditionSequentialNumber, string ConditionScaleLine, map<string|string[]> headers = {}, *GetA_PurInfoRecdPrcgCndnScaleQueries queries) returns A_PurInfoRecdPrcgCndnScaleType|error {
+    remote isolated function getA_PurInfoRecdPrcgCndnScale(string ConditionRecord, string ConditionSequentialNumber, string ConditionScaleLine, map<string|string[]> headers = {}, *GetA_PurInfoRecdPrcgCndnScaleQueries queries) returns A_PurInfoRecdPrcgCndnScaleWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndnScale(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionSequentialNumber='${getEncodedUri(ConditionSequentialNumber)}',ConditionScaleLine='${getEncodedUri(ConditionScaleLine)}')`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -333,7 +333,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getA_PurInfoRecdPrcgCndnValidity(string ConditionRecord, string ConditionValidityEndDate, map<string|string[]> headers = {}, *GetA_PurInfoRecdPrcgCndnValidityQueries queries) returns A_PurInfoRecdPrcgCndnValidityType|error {
+    remote isolated function getA_PurInfoRecdPrcgCndnValidity(string ConditionRecord, string ConditionValidityEndDate, map<string|string[]> headers = {}, *GetA_PurInfoRecdPrcgCndnValidityQueries queries) returns A_PurInfoRecdPrcgCndnValidityWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndnValidity(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionValidityEndDate=datetime'${getEncodedUri(ConditionValidityEndDate)}')`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -347,7 +347,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, map<string|string[]> headers = {}, *GetA_PurInfoRecdSuplmntPrcgCndnQueries queries) returns A_PurInfoRecdSuplmntPrcgCndnType|error {
+    remote isolated function getA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, map<string|string[]> headers = {}, *GetA_PurInfoRecdSuplmntPrcgCndnQueries queries) returns A_PurInfoRecdSuplmntPrcgCndnWrapper|error {
         string resourcePath = string `/A_PurInfoRecdSuplmntPrcgCndn(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionSequentialNumber='${getEncodedUri(ConditionSequentialNumber)}')`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -360,7 +360,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getA_PurchasingInfoRecord(string PurchasingInfoRecord, map<string|string[]> headers = {}, *GetA_PurchasingInfoRecordQueries queries) returns A_PurchasingInfoRecordType|error {
+    remote isolated function getA_PurchasingInfoRecord(string PurchasingInfoRecord, map<string|string[]> headers = {}, *GetA_PurchasingInfoRecordQueries queries) returns A_PurchasingInfoRecordWrapper|error {
         string resourcePath = string `/A_PurchasingInfoRecord('${getEncodedUri(PurchasingInfoRecord)}')`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -380,7 +380,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getA_PurgInfoRecdOrgPOText(string Language, string DocumentText, string TechnicalObjectType, string ArchObjectNumber, string PurchasingInfoRecord, string PurchasingOrganization, string PurchasingInfoRecordCategory, string Plant, map<string|string[]> headers = {}, *GetA_PurgInfoRecdOrgPOTextQueries queries) returns A_PurgInfoRecdOrgPOTextType|error {
+    remote isolated function getA_PurgInfoRecdOrgPOText(string Language, string DocumentText, string TechnicalObjectType, string ArchObjectNumber, string PurchasingInfoRecord, string PurchasingOrganization, string PurchasingInfoRecordCategory, string Plant, map<string|string[]> headers = {}, *GetA_PurgInfoRecdOrgPOTextQueries queries) returns A_PurgInfoRecdOrgPOTextWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPOText(Language='${getEncodedUri(Language)}',DocumentText='${getEncodedUri(DocumentText)}',TechnicalObjectType='${getEncodedUri(TechnicalObjectType)}',ArchObjectNumber='${getEncodedUri(ArchObjectNumber)}',PurchasingInfoRecord='${getEncodedUri(PurchasingInfoRecord)}',PurchasingOrganization='${getEncodedUri(PurchasingOrganization)}',PurchasingInfoRecordCategory='${getEncodedUri(PurchasingInfoRecordCategory)}',Plant='${getEncodedUri(Plant)}')`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -396,7 +396,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, map<string|string[]> headers = {}, *GetA_PurgInfoRecdOrgPlantDataQueries queries) returns A_PurgInfoRecdOrgPlantDataType|error {
+    remote isolated function getA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, map<string|string[]> headers = {}, *GetA_PurgInfoRecdOrgPlantDataQueries queries) returns A_PurgInfoRecdOrgPlantDataWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPlantData(PurchasingInfoRecord='${getEncodedUri(PurchasingInfoRecord)}',PurchasingInfoRecordCategory='${getEncodedUri(PurchasingInfoRecordCategory)}',PurchasingOrganization='${getEncodedUri(PurchasingOrganization)}',Plant='${getEncodedUri(Plant)}')`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -410,7 +410,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getPurInfoRecdPrcgCndnOfA_PurInfoRecdPrcgCndnValidity(string ConditionRecord, string ConditionValidityEndDate, map<string|string[]> headers = {}, *GetPurInfoRecdPrcgCndnOfA_PurInfoRecdPrcgCndnValidityQueries queries) returns A_PurInfoRecdPrcgCndnType|error {
+    remote isolated function getPurInfoRecdPrcgCndnOfA_PurInfoRecdPrcgCndnValidity(string ConditionRecord, string ConditionValidityEndDate, map<string|string[]> headers = {}, *GetPurInfoRecdPrcgCndnOfA_PurInfoRecdPrcgCndnValidityQueries queries) returns A_PurInfoRecdPrcgCndnWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndnValidity(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionValidityEndDate=datetime'${getEncodedUri(ConditionValidityEndDate)}')/to_PurInfoRecdPrcgCndn`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -424,7 +424,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getPurInfoRecdPrcgCndnOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, map<string|string[]> headers = {}, *GetPurInfoRecdPrcgCndnOfA_PurInfoRecdSuplmntPrcgCndnQueries queries) returns A_PurInfoRecdPrcgCndnType|error {
+    remote isolated function getPurInfoRecdPrcgCndnOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, map<string|string[]> headers = {}, *GetPurInfoRecdPrcgCndnOfA_PurInfoRecdSuplmntPrcgCndnQueries queries) returns A_PurInfoRecdPrcgCndnWrapper|error {
         string resourcePath = string `/A_PurInfoRecdSuplmntPrcgCndn(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionSequentialNumber='${getEncodedUri(ConditionSequentialNumber)}')/to_PurInfoRecdPrcgCndn`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -438,7 +438,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getPurgInfoRecdOfA_PurInfoRecdPrcgCndnValidity(string ConditionRecord, string ConditionValidityEndDate, map<string|string[]> headers = {}, *GetPurgInfoRecdOfA_PurInfoRecdPrcgCndnValidityQueries queries) returns A_PurchasingInfoRecordType|error {
+    remote isolated function getPurgInfoRecdOfA_PurInfoRecdPrcgCndnValidity(string ConditionRecord, string ConditionValidityEndDate, map<string|string[]> headers = {}, *GetPurgInfoRecdOfA_PurInfoRecdPrcgCndnValidityQueries queries) returns A_PurchasingInfoRecordWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndnValidity(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionValidityEndDate=datetime'${getEncodedUri(ConditionValidityEndDate)}')/to_PurgInfoRecd`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -454,7 +454,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getPurgInfoRecdOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, map<string|string[]> headers = {}, *GetPurgInfoRecdOfA_PurgInfoRecdOrgPlantDataQueries queries) returns A_PurchasingInfoRecordType|error {
+    remote isolated function getPurgInfoRecdOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, map<string|string[]> headers = {}, *GetPurgInfoRecdOfA_PurgInfoRecdOrgPlantDataQueries queries) returns A_PurchasingInfoRecordWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPlantData(PurchasingInfoRecord='${getEncodedUri(PurchasingInfoRecord)}',PurchasingInfoRecordCategory='${getEncodedUri(PurchasingInfoRecordCategory)}',PurchasingOrganization='${getEncodedUri(PurchasingOrganization)}',Plant='${getEncodedUri(Plant)}')/to_PurgInfoRecd`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -468,7 +468,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entity 
-    remote isolated function getPurgInfoRecdOrgPlantDataOfA_PurInfoRecdPrcgCndnValidity(string ConditionRecord, string ConditionValidityEndDate, map<string|string[]> headers = {}, *GetPurgInfoRecdOrgPlantDataOfA_PurInfoRecdPrcgCndnValidityQueries queries) returns A_PurgInfoRecdOrgPlantDataType|error {
+    remote isolated function getPurgInfoRecdOrgPlantDataOfA_PurInfoRecdPrcgCndnValidity(string ConditionRecord, string ConditionValidityEndDate, map<string|string[]> headers = {}, *GetPurgInfoRecdOrgPlantDataOfA_PurInfoRecdPrcgCndnValidityQueries queries) returns A_PurgInfoRecdOrgPlantDataWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndnValidity(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionValidityEndDate=datetime'${getEncodedUri(ConditionValidityEndDate)}')/to_PurgInfoRecdOrgPlantData`;
         map<Encoding> queryParamEncoding = {"$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -480,7 +480,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listA_PurInfoRecdPrcgCndnScales(map<string|string[]> headers = {}, *ListA_PurInfoRecdPrcgCndnScalesQueries queries) returns Wrapper_5|error {
+    remote isolated function listA_PurInfoRecdPrcgCndnScales(map<string|string[]> headers = {}, *ListA_PurInfoRecdPrcgCndnScalesQueries queries) returns CollectionOfA_PurInfoRecdPrcgCndnScaleWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndnScale`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -492,7 +492,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listA_PurInfoRecdPrcgCndnValidities(map<string|string[]> headers = {}, *ListA_PurInfoRecdPrcgCndnValiditiesQueries queries) returns Wrapper_2|error {
+    remote isolated function listA_PurInfoRecdPrcgCndnValidities(map<string|string[]> headers = {}, *ListA_PurInfoRecdPrcgCndnValiditiesQueries queries) returns CollectionOfA_PurInfoRecdPrcgCndnValidityWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndnValidity`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -504,7 +504,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listA_PurInfoRecdPrcgCndns(map<string|string[]> headers = {}, *ListA_PurInfoRecdPrcgCndnsQueries queries) returns Wrapper_4|error {
+    remote isolated function listA_PurInfoRecdPrcgCndns(map<string|string[]> headers = {}, *ListA_PurInfoRecdPrcgCndnsQueries queries) returns CollectionOfA_PurInfoRecdPrcgCndnWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndn`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -516,7 +516,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listA_PurInfoRecdSuplmntPrcgCndns(map<string|string[]> headers = {}, *ListA_PurInfoRecdSuplmntPrcgCndnsQueries queries) returns Wrapper_6|error {
+    remote isolated function listA_PurInfoRecdSuplmntPrcgCndns(map<string|string[]> headers = {}, *ListA_PurInfoRecdSuplmntPrcgCndnsQueries queries) returns CollectionOfA_PurInfoRecdSuplmntPrcgCndnWrapper|error {
         string resourcePath = string `/A_PurInfoRecdSuplmntPrcgCndn`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -528,7 +528,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listA_PurchasingInfoRecords(map<string|string[]> headers = {}, *ListA_PurchasingInfoRecordsQueries queries) returns Wrapper|error {
+    remote isolated function listA_PurchasingInfoRecords(map<string|string[]> headers = {}, *ListA_PurchasingInfoRecordsQueries queries) returns CollectionOfA_PurchasingInfoRecordWrapper|error {
         string resourcePath = string `/A_PurchasingInfoRecord`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -540,7 +540,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listA_PurgInfoRecdOrgPOTexts(map<string|string[]> headers = {}, *ListA_PurgInfoRecdOrgPOTextsQueries queries) returns Wrapper_3|error {
+    remote isolated function listA_PurgInfoRecdOrgPOTexts(map<string|string[]> headers = {}, *ListA_PurgInfoRecdOrgPOTextsQueries queries) returns CollectionOfA_PurgInfoRecdOrgPOTextWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPOText`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -552,7 +552,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listA_PurgInfoRecdOrgPlantData(map<string|string[]> headers = {}, *ListA_PurgInfoRecdOrgPlantDataQueries queries) returns Wrapper_1|error {
+    remote isolated function listA_PurgInfoRecdOrgPlantData(map<string|string[]> headers = {}, *ListA_PurgInfoRecdOrgPlantDataQueries queries) returns CollectionOfA_PurgInfoRecdOrgPlantDataWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPlantData`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -565,7 +565,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdPrcgCndn(string ConditionRecord, map<string|string[]> headers = {}, *ListPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdPrcgCndnQueries queries) returns Wrapper_2|error {
+    remote isolated function listPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdPrcgCndn(string ConditionRecord, map<string|string[]> headers = {}, *ListPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdPrcgCndnQueries queries) returns CollectionOfA_PurInfoRecdPrcgCndnValidityWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndn('${getEncodedUri(ConditionRecord)}')/to_PurInfoRecdPrcgCndnValidity`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -579,7 +579,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, map<string|string[]> headers = {}, *ListPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdSuplmntPrcgCndnQueries queries) returns Wrapper_2|error {
+    remote isolated function listPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, map<string|string[]> headers = {}, *ListPurInfoRecdPrcgCndnValiditiesOfA_PurInfoRecdSuplmntPrcgCndnQueries queries) returns CollectionOfA_PurInfoRecdPrcgCndnValidityWrapper|error {
         string resourcePath = string `/A_PurInfoRecdSuplmntPrcgCndn(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionSequentialNumber='${getEncodedUri(ConditionSequentialNumber)}')/to_PurInfoRecdPrcgCndnValidity`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -595,7 +595,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listPurInfoRecdPrcgCndnValiditiesOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, map<string|string[]> headers = {}, *ListPurInfoRecdPrcgCndnValiditiesOfA_PurgInfoRecdOrgPlantDataQueries queries) returns Wrapper_2|error {
+    remote isolated function listPurInfoRecdPrcgCndnValiditiesOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, map<string|string[]> headers = {}, *ListPurInfoRecdPrcgCndnValiditiesOfA_PurgInfoRecdOrgPlantDataQueries queries) returns CollectionOfA_PurInfoRecdPrcgCndnValidityWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPlantData(PurchasingInfoRecord='${getEncodedUri(PurchasingInfoRecord)}',PurchasingInfoRecordCategory='${getEncodedUri(PurchasingInfoRecordCategory)}',PurchasingOrganization='${getEncodedUri(PurchasingOrganization)}',Plant='${getEncodedUri(Plant)}')/to_PurInfoRecdPrcgCndnValidity`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -611,7 +611,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listPurInfoRecdPurOrgTextsOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, map<string|string[]> headers = {}, *ListPurInfoRecdPurOrgTextsOfA_PurgInfoRecdOrgPlantDataQueries queries) returns Wrapper_3|error {
+    remote isolated function listPurInfoRecdPurOrgTextsOfA_PurgInfoRecdOrgPlantData(string PurchasingInfoRecord, string PurchasingInfoRecordCategory, string PurchasingOrganization, string Plant, map<string|string[]> headers = {}, *ListPurInfoRecdPurOrgTextsOfA_PurgInfoRecdOrgPlantDataQueries queries) returns CollectionOfA_PurgInfoRecdOrgPOTextWrapper|error {
         string resourcePath = string `/A_PurgInfoRecdOrgPlantData(PurchasingInfoRecord='${getEncodedUri(PurchasingInfoRecord)}',PurchasingInfoRecordCategory='${getEncodedUri(PurchasingInfoRecordCategory)}',PurchasingOrganization='${getEncodedUri(PurchasingOrganization)}',Plant='${getEncodedUri(Plant)}')/to_PurInfoRecdPurOrgText`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -624,7 +624,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listPurInfoRecdSuplmntPrcgCndnsOfA_PurInfoRecdPrcgCndn(string ConditionRecord, map<string|string[]> headers = {}, *ListPurInfoRecdSuplmntPrcgCndnsOfA_PurInfoRecdPrcgCndnQueries queries) returns Wrapper_6|error {
+    remote isolated function listPurInfoRecdSuplmntPrcgCndnsOfA_PurInfoRecdPrcgCndn(string ConditionRecord, map<string|string[]> headers = {}, *ListPurInfoRecdSuplmntPrcgCndnsOfA_PurInfoRecdPrcgCndnQueries queries) returns CollectionOfA_PurInfoRecdSuplmntPrcgCndnWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndn('${getEncodedUri(ConditionRecord)}')/to_PurInfoRecdSuplmntPrcgCndn`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -637,7 +637,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdPrcgCndn(string ConditionRecord, map<string|string[]> headers = {}, *ListPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdPrcgCndnQueries queries) returns Wrapper_5|error {
+    remote isolated function listPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdPrcgCndn(string ConditionRecord, map<string|string[]> headers = {}, *ListPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdPrcgCndnQueries queries) returns CollectionOfA_PurInfoRecdPrcgCndnScaleWrapper|error {
         string resourcePath = string `/A_PurInfoRecdPrcgCndn('${getEncodedUri(ConditionRecord)}')/to_PurgInfoPricingCndnRecdScale`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -651,7 +651,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, map<string|string[]> headers = {}, *ListPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdSuplmntPrcgCndnQueries queries) returns Wrapper_5|error {
+    remote isolated function listPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdSuplmntPrcgCndn(string ConditionRecord, string ConditionSequentialNumber, map<string|string[]> headers = {}, *ListPurgInfoPricingCndnRecdScalesOfA_PurInfoRecdSuplmntPrcgCndnQueries queries) returns CollectionOfA_PurInfoRecdPrcgCndnScaleWrapper|error {
         string resourcePath = string `/A_PurInfoRecdSuplmntPrcgCndn(ConditionRecord='${getEncodedUri(ConditionRecord)}',ConditionSequentialNumber='${getEncodedUri(ConditionSequentialNumber)}')/to_PurgInfoPricingCndnRecdScale`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
@@ -664,7 +664,7 @@ public isolated client class Client {
     # + headers - Headers to be sent with the request 
     # + queries - Queries to be sent with the request 
     # + return - Retrieved entities 
-    remote isolated function listPurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecord(string PurchasingInfoRecord, map<string|string[]> headers = {}, *ListPurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecordQueries queries) returns Wrapper_1|error {
+    remote isolated function listPurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecord(string PurchasingInfoRecord, map<string|string[]> headers = {}, *ListPurgInfoRecdOrgPlantDataOfA_PurchasingInfoRecordQueries queries) returns CollectionOfA_PurgInfoRecdOrgPlantDataWrapper|error {
         string resourcePath = string `/A_PurchasingInfoRecord('${getEncodedUri(PurchasingInfoRecord)}')/to_PurgInfoRecdOrgPlantData`;
         map<Encoding> queryParamEncoding = {"$orderby": {style: FORM, explode: false}, "$select": {style: FORM, explode: false}, "$expand": {style: FORM, explode: false}};
         resourcePath = resourcePath + check getPathForQueryParam(queries, queryParamEncoding);
