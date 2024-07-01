@@ -77,8 +77,17 @@ type Post record {
     map<ResponseCode> responses?;
 };
 
+type Parameter record {
+    string name?;
+    string 'in?;
+    boolean required?;
+    string description?;
+    boolean explode?;
+    json schema?;
+};
+
 type Path record {
-    json[] parameters?;
+    Parameter[] parameters?;
     Get get?;
     Post post?;
 };
@@ -134,6 +143,48 @@ public function main(string apiName) returns error? {
     check sanitizeSchemaNames(apiName, specPath);
     check sanitizeEnumParamters(specPath);
     check sanitizeResponseSchemaNames(specPath);
+    // If the param name and schema name are the same, dependently typed functions are not compiled
+    check sanitizeSameParameterNameAndSchemaName(specPath);
+}
+
+function sanitizeSameParameterNameAndSchemaName(string specPath) returns error? {
+    json openAPISpec = check io:fileReadJson(specPath);
+
+    Specification spec = check openAPISpec.cloneWithType(Specification);
+
+    if spec.x\-sap\-api\-type != "ODATAV4" {
+        return;
+    }
+
+    map<Path> paths = spec.paths;
+    foreach var [_, value] in paths.entries() {
+        string reponseSchema = "";
+        map<ResponseCode> responses = value.get?.responses ?: {};
+        foreach [string, ResponseCode] [_, item] in responses.entries() {
+            if item.description == "Retrieved entity" {
+                map<ResponseHeader> content = item.content ?: {};
+                ResponseHeader app = content["application/json"] ?: {};
+                ResponseSchema schema = app.schema ?: {};
+                string? schemaRef = <string?> schema["$ref"];
+                if schemaRef is () {
+                    continue;
+                }
+                reponseSchema = schemaRef.substring(21);
+                break;
+            }
+        }
+
+        Parameter[] params = value.parameters ?: [];
+        foreach int i in 0...params.length() - 1 {
+            string paramName = params[i].name ?: "";
+            if paramName == reponseSchema {
+                params[i].name = reponseSchema.substring(0, 1).toLowerAscii() + reponseSchema.substring(1);
+                break;
+            }
+        }
+    }
+
+    check io:fileWriteJson(specPath, spec.toJson());
 }
 
 function sanitizeEnumParamters(string specPath) returns error? {
@@ -254,7 +305,7 @@ function getSanitizedParameterName(string key, string paramName, boolean isODATA
 
     regexp:RegExp pathRegex;
     if isODATA4 {
-        pathRegex = re `^/([^/]+)?(/[^{]+)?(/[^/{]+)?(/.*)?$`;
+        pathRegex = re `/([^{]*)(\{.*\})?(/.*)?`;
     } else {
         pathRegex = re `/([^(]*)(\(.*\))?(/.*)?`;
     }
@@ -277,31 +328,49 @@ function getSanitizedParameterName(string key, string paramName, boolean isODATA
             }
         }
         3 => {
-            regexp:Span? basePath = groups[1];
-            if basePath !is () {
-                parameterName += basePath.substring().concat("ByKey");
-                possibleDuplicateKey1 = basePath.substring();
+            regexp:Span? basePathSpan = groups[1];
+            if basePathSpan !is () {
+                string basePath = basePathSpan.substring();
+                if isODATA4 {
+                    basePath = basePath.substring(0, basePath.length() - 1);
+                }
+                parameterName += basePath.concat("ByKey");
+                possibleDuplicateKey1 = basePath;
             }
         }
         4 => {
             regexp:Span? resourcePath = groups[3];
-            if resourcePath !is () {
-                string resourcePathString = resourcePath.substring();
+            string resourcePathString = resourcePath is () ? "" : resourcePath.substring();
+
+            // SAP__self.MarkDefectAsResolved
+            if resourcePathString.startsWith("/SAP__self.") {
+                parameterName += resourcePathString.substring(11);
+                parameterName = parameterName.substring(0, 1).toUpperAscii() + parameterName.substring(1);
+            }
+
+            if resourcePathString != "" {
                 if resourcePathString.startsWith("/") {
                     resourcePathString = resourcePathString.substring(1);
                 }
                 if resourcePathString.startsWith("to_") {
                     resourcePathString = resourcePathString.substring(3);
                 }
+                if resourcePathString.startsWith("_") {
+                    resourcePathString = resourcePathString.substring(1);
+                }
                 resourcePathString = resourcePathString.substring(0, 1).toUpperAscii() + resourcePathString.substring(1);
                 possibleDuplicateKey1 = resourcePathString;
 
-                regexp:Span? basePath = groups[1];
-                if basePath is () {
+                regexp:Span? basePathSpan = groups[1];
+                if basePathSpan is () {
                     return ["", "", ""];
                 }
-                parameterName += resourcePathString.concat("Of", basePath.substring());
-                possibleDuplicateKey2 = basePath.substring() + resourcePathString;
+                string basePath = basePathSpan.substring();
+                if isODATA4 {
+                    basePath = basePath.substring(0, basePath.length() - 1);
+                }
+                parameterName += resourcePathString.concat("Of", basePath);
+                possibleDuplicateKey2 = basePath + resourcePathString;
             }
         }
     }
