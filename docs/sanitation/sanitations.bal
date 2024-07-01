@@ -156,8 +156,9 @@ function sanitizeSameParameterNameAndSchemaName(string specPath) returns error? 
         return;
     }
 
+    map<Path> updatedPaths = {};
     map<Path> paths = spec.paths;
-    foreach var [_, value] in paths.entries() {
+    foreach var [key, value] in paths.entries() {
         string reponseSchema = "";
         map<ResponseCode> responses = value.get?.responses ?: {};
         foreach [string, ResponseCode] [_, item] in responses.entries() {
@@ -165,7 +166,7 @@ function sanitizeSameParameterNameAndSchemaName(string specPath) returns error? 
                 map<ResponseHeader> content = item.content ?: {};
                 ResponseHeader app = content["application/json"] ?: {};
                 ResponseSchema schema = app.schema ?: {};
-                string? schemaRef = <string?> schema["$ref"];
+                string? schemaRef = <string?>schema["$ref"];
                 if schemaRef is () {
                     continue;
                 }
@@ -174,15 +175,30 @@ function sanitizeSameParameterNameAndSchemaName(string specPath) returns error? 
             }
         }
 
+        if reponseSchema == "" {
+            continue;
+        }
+
+        string updatedParamName = reponseSchema.substring(0, 1).toLowerAscii() + reponseSchema.substring(1);
         Parameter[] params = value.parameters ?: [];
-        foreach int i in 0...params.length() - 1 {
+        foreach int i in 0 ... params.length() - 1 {
             string paramName = params[i].name ?: "";
             if paramName == reponseSchema {
-                params[i].name = reponseSchema.substring(0, 1).toLowerAscii() + reponseSchema.substring(1);
+                params[i].name = updatedParamName;
                 break;
             }
         }
+
+        int? paramNameIndex = key.indexOf("{" + reponseSchema + "}");
+        if paramNameIndex !is () {
+            string updatedPath = key.substring(0, paramNameIndex) + "{" + updatedParamName + "}" + key.substring(paramNameIndex + reponseSchema.length() + 2);
+            updatedPaths[updatedPath] = value;
+        } else {
+            updatedPaths[key] = value;
+        }
     }
+
+    spec.paths = updatedPaths;
 
     check io:fileWriteJson(specPath, spec.toJson());
 }
