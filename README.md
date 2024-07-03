@@ -11,7 +11,11 @@
 designed for large-scale enterprises by SAP SE.
 
 This repository encompasses all Ballerina packages pertaining to the S/4HANA sourcing & procurement submodule. Notably:
-1. The `ballerinax/sap.s4hana.api_inforecord_process_srv` package offers APIs for seamless integration with the [Purchasing Info Record API v1.0.0](https://api.sap.com/api/API_INFORECORD_PROCESS_SRV/overview). This synchronous inbound service allows the creation, modification, and deletion of purchasing info records, complete with conditions. The service encompasses general data, purchasing organization data, and conditions.
+
+1. The `ballerinax/sap.s4hana.api_inforecord_process_srv` package offers APIs for seamless integration with
+   the [Purchasing Info Record API v1.0.0](https://api.sap.com/api/API_INFORECORD_PROCESS_SRV/overview). This
+   synchronous inbound service allows the creation, modification, and deletion of purchasing info records, complete with
+   conditions. The service encompasses general data, purchasing organization data, and conditions.
 
 ## Issues and projects
 
