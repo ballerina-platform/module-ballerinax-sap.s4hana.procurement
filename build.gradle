@@ -59,6 +59,7 @@ task clean {
 }
 
 task build {
+    dependsOn(':procurement-sanitation:build')
     dependsOn(':procurement-ballerina:build')
     dependsOn(':procurement-examples:build')
 }
