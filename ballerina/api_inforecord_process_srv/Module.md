@@ -1,9 +1,9 @@
 ## Overview
 
+The `ballerinax/sap.s4hana.api_inforecord_process_srv` package offers APIs for seamless integration with the [Purchasing Info Record API v1.0.0](https://api.sap.com/api/API_INFORECORD_PROCESS_SRV/overview). This synchronous inbound service allows the creation, modification, and deletion of purchasing info records, complete with conditions. The service encompasses general data, purchasing organization data, and conditions.
+
 [S/4HANA](https://www.sap.com/india/products/erp/s4hana.html) is a robust enterprise resource planning (ERP) solution,
 designed for large-scale enterprises by SAP SE.
-
-The `ballerinax/sap.s4hana.api_inforecord_process_srv` package offers APIs for seamless integration with the [Purchasing Info Record API v1.0.0](https://api.sap.com/api/API_INFORECORD_PROCESS_SRV/overview). This synchronous inbound service allows the creation, modification, and deletion of purchasing info records, complete with conditions. The service encompasses general data, purchasing organization data, and conditions.
 
 ## Setup guide
 
