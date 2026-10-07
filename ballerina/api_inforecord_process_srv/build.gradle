@@ -16,10 +16,16 @@
  * under the License.
  */
 import org.apache.tools.ant.taskdefs.condition.Os
+import org.gradle.process.ExecOperations
+import javax.inject.Inject
 
 plugins {
     id 'net.researchgate.release'
     id 'io.ballerina.plugin'
+}
+
+abstract class InforecordExecHelper {
+    @Inject abstract ExecOperations getExecOperations()
 }
 
 description = 'Ballerina - SAP S/4HANA Purchasing Info Record API'
@@ -31,7 +37,7 @@ def ballerinaTomlFile = file("${project.projectDir}/Ballerina.toml")
 ballerina {
     packageOrganization = project.ext.packageOrg
     module = packageName
-    isConnector = true
+    connector = true
     platform = "any"
     testCoverageParam = '--code-coverage --coverage-format=xml --includes=ballerinax.* --excludes=modules/**/**'
 }
@@ -45,8 +51,9 @@ task updateTomlFiles {
 }
 
 task commitTomlFiles {
+    def execHelper = project.objects.newInstance(InforecordExecHelper)
     doLast {
-        project.exec {
+        execHelper.execOperations.exec {
             ignoreExitValue true
             if (Os.isFamily(Os.FAMILY_WINDOWS)) {
                 commandLine 'cmd', '/c', "git commit -m \"[Automated] Update the toml files\" Ballerina.toml Dependencies.toml"
