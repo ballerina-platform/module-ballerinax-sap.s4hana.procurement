@@ -1,21 +1,20 @@
-# Ballerina S/4HANA Sourcing & Procurement Connectors
+# Ballerina SAP S/4HANA Sourcing & Procurement Connectors
 
 [![Build](https://github.com/ballerina-platform/module-ballerinax-sap.s4hana.procurement/actions/workflows/ci.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-sap.s4hana.procurement/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/ballerina-platform/module-ballerinax-sap.s4hana.procurement/branch/main/graph/badge.svg)](https://codecov.io/gh/ballerina-platform/module-ballerinax-sap.s4hana.procurement)
-[![Trivy](https://github.com/ballerina-platform/module-ballerinax-sap.s4hana.procurement/actions/workflows/trivy-scan.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-sap.s4hana.procurement/actions/workflows/trivy-scan.yml)
-[![GraalVM Check](https://github.com/ballerina-platform/module-ballerinax-sap.s4hana.procurement/actions/workflows/build-with-bal-test-graalvm.yml/badge.svg)](https://github.com/ballerina-platform/module-ballerinax-sap.s4hana.procurement/actions/workflows/build-with-bal-test-graalvm.yml)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/ballerina-platform/module-ballerinax-sap.s4hana.procurement.svg)](https://github.com/ballerina-platform/module-ballerinax-sap.s4hana.procurement/commits/main)
 [![GitHub Issues](https://img.shields.io/github/issues/ballerina-platform/ballerina-library/module/s4hana.svg?label=Open%20Issues)](https://github.com/ballerina-platform/ballerina-library/labels/module%2Fs4hana)
 
-[S/4HANA](https://www.sap.com/india/products/erp/s4hana.html) is a robust enterprise resource planning (ERP) solution,
-designed for large-scale enterprises by SAP SE.
+[SAP S/4HANA](https://www.sap.com/products/erp/s4hana.html) is a robust enterprise resource planning (ERP) solution,
+designed for large-scale enterprises by SAP SE. It covers core business processes such as finance, procurement, sales,
+and materials management, including sourcing and procurement.
 
-This repository encompasses all Ballerina packages pertaining to the S/4HANA sourcing & procurement submodule. Notably:
+This repository encompasses all Ballerina packages pertaining to the SAP S/4HANA Sourcing & Procurement module.
+Notably:
 
-1. The `ballerinax/sap.s4hana.api_inforecord_process_srv` package offers APIs for seamless integration with
-   the [Purchasing Info Record API v1.0.0](https://api.sap.com/api/API_INFORECORD_PROCESS_SRV/overview). This
-   synchronous inbound service allows the creation, modification, and deletion of purchasing info records, complete with
-   conditions. The service encompasses general data, purchasing organization data, and conditions.
+1. [SAP S/4HANA Purchasing Info Record](ballerina/api_inforecord_process_srv) provides a way to interact with the
+   [Purchasing Info Record API](https://api.sap.com/api/API_INFORECORD_PROCESS_SRV/overview).
+   The service allows to create, read, update and delete purchasing info records, with their purchasing organization
+   and plant data, purchase order texts and pricing conditions.
 
 ## Issues and projects
 
@@ -32,8 +31,8 @@ This repository only contains the source code for the package.
 1. Download and install Java SE Development Kit (JDK) version 17. You can download it from either of the following
    sources:
 
-    * [Oracle JDK](https://www.oracle.com/java/technologies/downloads/)
-    * [OpenJDK](https://adoptium.net/)
+   * [Oracle JDK](https://www.oracle.com/java/technologies/downloads/)
+   * [OpenJDK](https://adoptium.net/)
 
    > **Note:** After installation, remember to set the `JAVA_HOME` environment variable to the directory where JDK was
    installed.
@@ -60,28 +59,33 @@ Execute the commands below to build from the source.
    ./gradlew clean test
    ```
 
-3. To build the without the tests:
+3. To build without the tests:
 
    ```bash
    ./gradlew clean build -x test
    ```
 
-4. To build only one specific package
+4. To build only one specific package:
 
    ```bash
-   ./gradlew clean :procurement-ballerina:<api_name>:build
+   ./gradlew clean :procurement-ballerina:<module_name>:build
    ```
 
-   | API Name                   | Connector                                        |
+   | Module Name                | Connector                                        |
    |----------------------------|--------------------------------------------------|
    | api_inforecord_process_srv | ballerinax/sap.s4hana.api_inforecord_process_srv |
 
-5. To run tests against different environment:
+5. To run tests against a live server, add a `tests/Config.toml` file to the package with the live server details
+   and run the tests (`Config.toml` files are ignored by Git):
 
-   ```bash
-   isTestOnLiveServer=true ./gradlew clean test 
+   ```toml
+   isTestOnLiveServer = true
+   hostname = "<unique id>-api.s4hana.cloud.sap"
+   username = "<communication user>"
+   password = "<password>"
    ```
-   **Note**: `isTestOnLiveServer` is false by default, tests are run against mock server.
+
+   **Note**: Tests are run against the mock server by default.
 
 6. To debug packages with a remote debugger:
 
@@ -97,9 +101,9 @@ Execute the commands below to build from the source.
 
 8. Publish the generated artifacts to the local Ballerina Central repository:
 
-    ```bash
-    ./gradlew clean build -PpublishToLocalCentral=true
-    ```
+   ```bash
+   ./gradlew clean build -PpublishToLocalCentral=true
+   ```
 
 9. Publish the generated artifacts to the Ballerina Central repository:
 
