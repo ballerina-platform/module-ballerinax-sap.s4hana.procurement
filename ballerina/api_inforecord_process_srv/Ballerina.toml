@@ -2,10 +2,9 @@
 org = "ballerinax"
 name = "sap.s4hana.api_inforecord_process_srv"
 version = "1.0.0"
-distribution = "2201.9.0"
+distribution = "2201.13.0"
 authors = ["Ballerina"]
-keywords = ["Business Management/ERP", "Cost/Paid", "Vendor/SAP", "Materials Management", "MM"]
-export = ["sap.s4hana.api_inforecord_process_srv"]
+keywords = ["Name/SAP S/4HANA Purchasing Info Record", "Type/Connector", "Vendor/SAP", "Area/ERP & Business Operations", "Business Management/ERP", "Cost/Paid", "S/4HANA", "Procurement", "Sourcing and Procurement", "Materials Management", "MM", "Purchasing", "Purchasing Info Record"]
 repository = "https://github.com/ballerina-platform/module-ballerinax-sap.s4hana.procurement"
 icon = "../icon.png"
 license = ["Apache-2.0"]
